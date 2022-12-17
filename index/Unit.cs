@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace index
 {
-    internal class Unit
+    abstract class Unit
+    {
+        string name;
+        string size;
+        bool side;
+    }
+    internal class Infantry : Unit
     {
 
     }
