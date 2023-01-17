@@ -8,7 +8,7 @@ namespace index
 {
     abstract class Unit
     {
-        string name = "1. Independent Brigade";
+        string name;
         string size;
         float org = 100;
         bool side;
