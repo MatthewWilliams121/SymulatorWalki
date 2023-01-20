@@ -8,21 +8,82 @@ namespace index
 {
     abstract class Unit
     {
-        string name;
-        string size;
-        float org = 100;
-        bool side;
+        protected string name;
+        protected int number;
+        protected string size;
+        protected float organization;
+        protected bool side;
+        System.Drawing.Bitmap SizeImage = Properties.Resources.Team;
         protected abstract float get_soft_attack();
         protected abstract float get_hard_attack();
+        virtual public System.Drawing.Bitmap getImageUnit() { return null; }
+        virtual public System.Drawing.Bitmap getUnitSizeImage() { return SizeImage; }
+        public int getNumber()
+        {
+            return number;
+        }
+        public string getName()
+        {
+            return name;
+        }
+        public void setSizeImageAndOrganization()
+        {
+            if(size == "Team")
+            {
+                SizeImage = Properties.Resources.Team;
+                this.organization = 1 * 100;
+            }
+            else if (size == "Platoon")
+            {
+                SizeImage = Properties.Resources.Platoon;
+                this.organization = 4 * 100;
+            }
+            //...
+        }
+
+
     }
     internal class Infantry : Unit
     {
-       // equipment inventory[]
-        
-        override protected float get_soft_attack() { return 6; }
-        override protected float get_hard_attack() { return 2; }
-    }
+        // equipment inventory[]
+        System.Drawing.Bitmap image =  Properties.Resources.Team; // nie team tylko infantry
 
+        override protected float get_soft_attack() { return 5; }
+        override protected float get_hard_attack() { return 2; }
+
+        public Infantry(string name, string size, bool side, int number) {
+            this.name = name;
+            this.size = size;
+            this.number = number;
+            this.side = side;
+            setSizeImageAndOrganization();
+        }
+        
+        public System.Drawing.Bitmap getImageUnit()
+        {
+            return image;
+        }
+
+    }
+    internal class Mechanized : Unit
+    {
+        // equipment inventory[]
+        System.Drawing.Bitmap image = Properties.Resources.nato_mechanized;
+        override protected float get_soft_attack() { return 7; }
+        override protected float get_hard_attack() { return 2; }
+        public Mechanized(string name, string size, bool side, int number)
+        {
+            this.name = name;
+            this.number = number;
+            this.size = size;
+            this.side = side;
+            setSizeImageAndOrganization();
+        }
+        override public System.Drawing.Bitmap getImageUnit()
+        {
+            return image;
+        }
+    }
     internal class equipment
     {
 

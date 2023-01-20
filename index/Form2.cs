@@ -12,10 +12,12 @@ namespace index
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        Form1 f1;
+        public Form2(Form1 f1)
         {
+            this.f1 = f1;
             InitializeComponent();
-            this.comboBox1.Items.AddRange(new object[] 
+            this.unitSizeComboBox.Items.AddRange(new object[] 
             {           
                         "Team",
                         "Platoon",
@@ -74,10 +76,10 @@ namespace index
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox1.SelectedIndex == 0)
+            if(unitSizeComboBox.SelectedIndex == 0)
             {
                 pictureSize.Image = Properties.Resources.Team;
-            }else if(comboBox1.SelectedIndex == 1)
+            }else if(unitSizeComboBox.SelectedIndex == 1)
             {
                 pictureSize.Image = Properties.Resources.Platoon;
             }
@@ -90,13 +92,13 @@ namespace index
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, "[^0-9]"))
+            if (System.Text.RegularExpressions.Regex.IsMatch(unitNumber.Text, "[^0-9]"))
             {
                 MessageBox.Show("Wprowadz liczbe.");
-                textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+                unitNumber.Text = unitNumber.Text.Remove(unitNumber.Text.Length - 1);
             }else
             {
-                label4.Text = textBox2.Text;
+                label4.Text = unitNumber.Text;
             }
         }
 
@@ -118,6 +120,14 @@ namespace index
                 pictureType.Image = Properties.Resources.nato_mechanized;
             }
 
+        }
+
+        private void saveUnitButton_Click(object sender, EventArgs e)
+        {
+            Mechanized unit = new Mechanized(unitNameLabel.Text,unitSizeComboBox.Text,true,Int16.Parse(unitNumber.Text));
+            Battlefield.attacker.Add(unit);
+            f1.refreshForm();
+            this.Close();
         }
     }
 }
