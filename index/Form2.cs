@@ -125,7 +125,7 @@ namespace index
         private void saveUnitButton_Click(object sender, EventArgs e)
         {
             Mechanized unit = new Mechanized(unitNameLabel.Text,unitSizeComboBox.Text,true,Int16.Parse(unitNumber.Text));
-            Battlefield.attacker.Add(unit);
+            Battlefield.attacker[f1.getSelected()] = unit;
             f1.refreshForm();
             this.Close();
         }

@@ -13,7 +13,7 @@ namespace index
         protected string size;
         protected float organization;
         protected bool side;
-        System.Drawing.Bitmap SizeImage = Properties.Resources.Team;
+        System.Drawing.Bitmap SizeImage;
         protected abstract float get_soft_attack();
         protected abstract float get_hard_attack();
         virtual public System.Drawing.Bitmap getImageUnit() { return null; }
@@ -42,6 +42,15 @@ namespace index
         }
 
 
+    }
+
+    internal class NoUnit : Unit
+
+    {
+        public NoUnit() { }
+
+        override protected float get_soft_attack() { return 0; }
+        override protected float get_hard_attack() { return 0; }
     }
     internal class Infantry : Unit
     {

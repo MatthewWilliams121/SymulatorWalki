@@ -8,10 +8,19 @@ namespace index
 {
     internal class Battlefield
     {
-        public static List<Unit> attacker = new List<Unit> { };
-        public static List<Unit> defender = new List<Unit> { };
+        public static List<Unit> attacker = new List<Unit> {
+        new NoUnit(),
+        new NoUnit(),
+        new NoUnit()
+        };
+        public static List<Unit> defender = new List<Unit> {
+        new NoUnit(),
+        new NoUnit(),
+        new NoUnit()
+        };
         //static public Unit[] attacker = new Unit[];
         //static public Unit[] defender;
+
         static private float get_attacker_value() { return 0; }
         static private float get_defender_value() { return 0; }
         static public void resolve() { }

@@ -52,6 +52,11 @@
             this.unit5SizePicture = new System.Windows.Forms.PictureBox();
             this.unit4SizePicture = new System.Windows.Forms.PictureBox();
             this.unit1Number = new System.Windows.Forms.Label();
+            this.unit2Number = new System.Windows.Forms.Label();
+            this.unit3Number = new System.Windows.Forms.Label();
+            this.unit6Number = new System.Windows.Forms.Label();
+            this.unit5Number = new System.Windows.Forms.Label();
+            this.unit4Number = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.unit3SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit2SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit1SizePicture)).BeginInit();
@@ -86,6 +91,7 @@
             this.unit2Button.Size = new System.Drawing.Size(124, 54);
             this.unit2Button.TabIndex = 2;
             this.unit2Button.UseVisualStyleBackColor = true;
+            this.unit2Button.Click += new System.EventHandler(this.unit2Button_Click);
             // 
             // unit3Button
             // 
@@ -252,16 +258,62 @@
             // unit1Number
             // 
             this.unit1Number.AutoSize = true;
-            this.unit1Number.Location = new System.Drawing.Point(43, 385);
+            this.unit1Number.Location = new System.Drawing.Point(70, 385);
             this.unit1Number.Name = "unit1Number";
             this.unit1Number.Size = new System.Drawing.Size(0, 16);
             this.unit1Number.TabIndex = 23;
+            // 
+            // unit2Number
+            // 
+            this.unit2Number.AutoSize = true;
+            this.unit2Number.Location = new System.Drawing.Point(64, 286);
+            this.unit2Number.Name = "unit2Number";
+            this.unit2Number.Size = new System.Drawing.Size(0, 16);
+            this.unit2Number.TabIndex = 24;
+            // 
+            // unit3Number
+            // 
+            this.unit3Number.AutoSize = true;
+            this.unit3Number.Location = new System.Drawing.Point(64, 174);
+            this.unit3Number.Name = "unit3Number";
+            this.unit3Number.Size = new System.Drawing.Size(0, 16);
+            this.unit3Number.TabIndex = 25;
+            // 
+            // unit6Number
+            // 
+            this.unit6Number.AutoSize = true;
+            this.unit6Number.Location = new System.Drawing.Point(558, 174);
+            this.unit6Number.Name = "unit6Number";
+            this.unit6Number.Size = new System.Drawing.Size(0, 16);
+            this.unit6Number.TabIndex = 26;
+            this.unit6Number.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // unit5Number
+            // 
+            this.unit5Number.AutoSize = true;
+            this.unit5Number.Location = new System.Drawing.Point(558, 283);
+            this.unit5Number.Name = "unit5Number";
+            this.unit5Number.Size = new System.Drawing.Size(0, 16);
+            this.unit5Number.TabIndex = 27;
+            // 
+            // unit4Number
+            // 
+            this.unit4Number.AutoSize = true;
+            this.unit4Number.Location = new System.Drawing.Point(514, 394);
+            this.unit4Number.Name = "unit4Number";
+            this.unit4Number.Size = new System.Drawing.Size(0, 16);
+            this.unit4Number.TabIndex = 28;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.Controls.Add(this.unit4Number);
+            this.Controls.Add(this.unit5Number);
+            this.Controls.Add(this.unit6Number);
+            this.Controls.Add(this.unit3Number);
+            this.Controls.Add(this.unit2Number);
             this.Controls.Add(this.unit1Number);
             this.Controls.Add(this.unit4SizePicture);
             this.Controls.Add(this.unit5SizePicture);
@@ -326,6 +378,11 @@
         private System.Windows.Forms.PictureBox unit4SizePicture;
         private System.Windows.Forms.PictureBox unit5SizePicture;
         private System.Windows.Forms.Label unit1Number;
+        private System.Windows.Forms.Label unit2Number;
+        private System.Windows.Forms.Label unit3Number;
+        private System.Windows.Forms.Label unit6Number;
+        private System.Windows.Forms.Label unit5Number;
+        private System.Windows.Forms.Label unit4Number;
     }
 }
 
