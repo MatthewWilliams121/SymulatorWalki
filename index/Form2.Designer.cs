@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBoxNATO = new System.Windows.Forms.CheckBox();
+            this.checkBoxCSTO = new System.Windows.Forms.CheckBox();
             this.unitNameLabel = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.unitSizeComboBox = new System.Windows.Forms.ComboBox();
@@ -46,27 +46,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureSize)).BeginInit();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // checkBoxNATO
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(139, 118);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(64, 20);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "NATO";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBoxNATO.AutoSize = true;
+            this.checkBoxNATO.Location = new System.Drawing.Point(139, 118);
+            this.checkBoxNATO.Name = "checkBoxNATO";
+            this.checkBoxNATO.Size = new System.Drawing.Size(64, 20);
+            this.checkBoxNATO.TabIndex = 0;
+            this.checkBoxNATO.Text = "NATO";
+            this.checkBoxNATO.UseVisualStyleBackColor = true;
+            this.checkBoxNATO.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // checkBox2
+            // checkBoxCSTO
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(140, 144);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(63, 20);
-            this.checkBox2.TabIndex = 1;
-            this.checkBox2.Text = "CSTO";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkBoxCSTO.AutoSize = true;
+            this.checkBoxCSTO.Location = new System.Drawing.Point(140, 144);
+            this.checkBoxCSTO.Name = "checkBoxCSTO";
+            this.checkBoxCSTO.Size = new System.Drawing.Size(63, 20);
+            this.checkBoxCSTO.TabIndex = 1;
+            this.checkBoxCSTO.Text = "CSTO";
+            this.checkBoxCSTO.UseVisualStyleBackColor = true;
+            this.checkBoxCSTO.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // unitNameLabel
             // 
@@ -195,8 +195,8 @@
             this.Controls.Add(this.unitSizeComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.unitNameLabel);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkBoxCSTO);
+            this.Controls.Add(this.checkBoxNATO);
             this.Name = "Form2";
             this.Text = "Dodawanie jednostki";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -209,8 +209,8 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBoxNATO;
+        private System.Windows.Forms.CheckBox checkBoxCSTO;
         private System.Windows.Forms.TextBox unitNameLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox unitSizeComboBox;

@@ -38,14 +38,23 @@ namespace index
 
         public void Form2_Load(object sender, EventArgs e)
         {
+            checkBoxNATO.Enabled = false;
+            checkBoxCSTO.Enabled = false;
+            if (f1.getSelected()<3)
+            {
+                checkBoxNATO.Checked = true;
+            }else
+            {
+                checkBoxCSTO.Checked = true;
+            }
 
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox1.Checked == true && checkBox2.Checked == true)
+            if(checkBoxNATO.Checked == true && checkBoxCSTO.Checked == true)
             {
-                checkBox2.Checked = false;
+                checkBoxCSTO.Checked = false;
             }
             else if (comboBox2.Enabled == false)
             {
@@ -60,9 +69,9 @@ namespace index
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox2.Checked == true && checkBox1.Checked == true)
+            if (checkBoxCSTO.Checked == true && checkBoxNATO.Checked == true)
             {
-                checkBox1.Checked = false;
+                checkBoxNATO.Checked = false;
             }else if(comboBox2.Enabled == false)
             {
                 comboBox2.Enabled = true;
