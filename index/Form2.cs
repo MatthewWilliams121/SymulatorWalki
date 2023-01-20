@@ -124,8 +124,17 @@ namespace index
 
         private void saveUnitButton_Click(object sender, EventArgs e)
         {
-            Mechanized unit = new Mechanized(unitNameLabel.Text,unitSizeComboBox.Text,true,Int16.Parse(unitNumber.Text));
-            Battlefield.attacker[f1.getSelected()] = unit;
+            Mechanized unit = new Mechanized(unitNameLabel.Text,unitSizeComboBox.Text,true,Int16.Parse(unitNumber.Text)); // TO OGARNIJ WOJTEK
+            if (f1.getSelected() < 3)
+            {
+                Battlefield.attacker[f1.getSelected()] = unit;
+            }
+            else
+            {
+
+                Battlefield.defender[f1.getSelected()-3] = unit;
+            }
+            
             f1.refreshForm();
             this.Close();
         }

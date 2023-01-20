@@ -109,6 +109,7 @@
             this.unit6Button.Size = new System.Drawing.Size(124, 54);
             this.unit6Button.TabIndex = 4;
             this.unit6Button.UseVisualStyleBackColor = true;
+            this.unit6Button.Click += new System.EventHandler(this.unit6Button_Click);
             // 
             // unit5Button
             // 
@@ -126,6 +127,7 @@
             this.unit4Button.Size = new System.Drawing.Size(124, 54);
             this.unit4Button.TabIndex = 6;
             this.unit4Button.UseVisualStyleBackColor = true;
+            this.unit4Button.Click += new System.EventHandler(this.unit4Button_Click);
             // 
             // simulateButton
             // 
@@ -135,6 +137,7 @@
             this.simulateButton.TabIndex = 7;
             this.simulateButton.Text = "Symuluj walkę";
             this.simulateButton.UseVisualStyleBackColor = true;
+            this.simulateButton.Click += new System.EventHandler(this.simulateButton_Click);
             // 
             // switchSidesButton
             // 

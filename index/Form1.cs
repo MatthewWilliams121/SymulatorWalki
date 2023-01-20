@@ -16,6 +16,7 @@ namespace index
         List<Button> buttonListAttacker;
         List<Button> buttonListDenfender;
         List<UnitView> unitViews;
+        List<UnitView> unitViews2;
         int selected;
         public Form1()
         {
@@ -40,6 +41,10 @@ namespace index
             unitViews.Add(new UnitView(unit1Button, unit1ProgressBar, unit1Number, unit1SizePicture));
             unitViews.Add(new UnitView(unit2Button, unit2ProgressBar, unit2Number, unit2SizePicture));
             unitViews.Add(new UnitView(unit3Button, unit3ProgressBar, unit3Number, unit3SizePicture));
+            unitViews2 = new List<UnitView>();
+            unitViews2.Add(new UnitView(unit4Button, unit4ProgressBar, unit4Number, unit4SizePicture));
+            unitViews2.Add(new UnitView(unit5Button, unit5ProgressBar, unit5Number, unit5SizePicture));
+            unitViews2.Add(new UnitView(unit6Button, unit6ProgressBar, unit6Number, unit6SizePicture));
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -59,8 +64,21 @@ namespace index
                     unit.unitButton.Image = Battlefield.attacker[i].getImageUnit();
                     unit.number.Text = Battlefield.attacker[i].getNumber().ToString();
                     unit.size.Image = Battlefield.attacker[i].getUnitSizeImage();
-                    if(unit.unitButton.Image != null) { unit.organization.Value = 100; }
-                    
+                    if (unit.unitButton.Image != null && ((int)Battlefield.attacker[i].getOrgPercentage()) > 0) { unit.organization.Value = ((int)Battlefield.attacker[i].getOrgPercentage()); } else { unit.organization.Value = 0; }
+
+                }
+                i++;
+            }
+            i = 0;
+            foreach (var unit in unitViews2)
+            {
+                if (i < Battlefield.defender.Count)
+                {
+                    unit.unitButton.Image = Battlefield.defender[i].getImageUnit();
+                    unit.number.Text = Battlefield.defender[i].getNumber().ToString();
+                    unit.size.Image = Battlefield.defender[i].getUnitSizeImage();
+                    if (unit.unitButton.Image != null && ((int)Battlefield.defender[i].getOrgPercentage())>0) { unit.organization.Value = ((int)Battlefield.defender[i].getOrgPercentage()); } else { unit.organization.Value = 0; }
+
                 }
                 i++;
             }
@@ -77,7 +95,9 @@ namespace index
 
         private void unit5Button_Click(object sender, EventArgs e)
         {
-
+            selected = 4;
+            Form2 f2 = new Form2(this);
+            f2.ShowDialog();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -90,6 +110,25 @@ namespace index
             selected = 1;
             Form2 f2 = new Form2(this);
             f2.ShowDialog();
+        }
+
+        private void unit4Button_Click(object sender, EventArgs e)
+        {
+            selected = 3;
+            Form2 f2 = new Form2(this);
+            f2.ShowDialog();
+        }
+
+        private void unit6Button_Click(object sender, EventArgs e)
+        {
+            selected = 5;
+            Form2 f2 = new Form2(this);
+            f2.ShowDialog();
+        }
+
+        private void simulateButton_Click(object sender, EventArgs e)
+        {
+            Battlefield.resolve(this);
         }
     }
     public class UnitView
