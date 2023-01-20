@@ -130,6 +130,11 @@ namespace index
         {
             Battlefield.resolve(this);
         }
+
+        private void switchSidesButton_Click(object sender, EventArgs e)
+        {
+            Battlefield.switchSides(this);
+        }
     }
     public class UnitView
     {

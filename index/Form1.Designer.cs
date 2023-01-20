@@ -147,6 +147,7 @@
             this.switchSidesButton.TabIndex = 8;
             this.switchSidesButton.Text = "Zamień strony";
             this.switchSidesButton.UseVisualStyleBackColor = true;
+            this.switchSidesButton.Click += new System.EventHandler(this.switchSidesButton_Click);
             // 
             // label1
             // 

@@ -26,6 +26,21 @@ namespace index
 
         static private float get_attacker_value() { return 0; }
         static private float get_defender_value() { return 0; }
+
+        static public void switchSides(Form1 f1)
+        {
+            form = f1;
+            List<Unit> temp = new List<Unit> {
+        new NoUnit(),
+        new NoUnit(),
+        new NoUnit()
+        };
+            temp = attacker;
+            attacker = defender;
+            defender = temp;
+            form.refreshForm();
+        }
+
         static private bool anyoneAlive(List<Unit> units)
         {
             foreach(var el in units)
