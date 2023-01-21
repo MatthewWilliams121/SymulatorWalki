@@ -16,19 +16,19 @@ namespace index
 
             unitSizeComboBox.Items.AddRange(new object[]
             {
-                "Team",
-                "Platoon",
-                "Company",
-                "Battalion",
-                "Brigade"
+                UnitSize.Team,
+                UnitSize.Platoon,
+                UnitSize.Company,
+                UnitSize.Battalion,
+                UnitSize.Brigade
             });
             unitKind.Items.AddRange(new object[]
             {
-                "Infantry",
-                "Armoured",
-                "Recon",
-                "Artillery",
-                "Mechanized"
+                UnitKind.Infantry,
+                UnitKind.Armoured,
+                UnitKind.Recon,
+                UnitKind.Artillery,
+                UnitKind.Mechanized
             });
             unitKind.Enabled = false;
             unitSizeComboBox.Enabled = false;
@@ -168,19 +168,19 @@ namespace index
             switch (unitKind.SelectedIndex)
             {
                 case 0:
-                    unit = new Infantry(unitNameLabel.Text,short.Parse(unitNumber.Text), true, unitSizeComboBox.Text);
+                    unit = new Infantry(unitNameLabel.Text,short.Parse(unitNumber.Text), true, (UnitSize) unitSizeComboBox.SelectedIndex);
                     break;
                 case 1:
-                    unit = new Armoured(unitNameLabel.Text,short.Parse(unitNumber.Text), true, unitSizeComboBox.Text);
+                    unit = new Armoured(unitNameLabel.Text,short.Parse(unitNumber.Text), true, (UnitSize) unitSizeComboBox.SelectedIndex);
                     break;
                 case 2:
-                    unit = new Recon(unitNameLabel.Text,short.Parse(unitNumber.Text), true, unitSizeComboBox.Text);
+                    unit = new Recon(unitNameLabel.Text,short.Parse(unitNumber.Text), true, (UnitSize) unitSizeComboBox.SelectedIndex);
                     break;
                 case 3:
-                    unit = new Artillery(unitNameLabel.Text,short.Parse(unitNumber.Text), true, unitSizeComboBox.Text);
+                    unit = new Artillery(unitNameLabel.Text,short.Parse(unitNumber.Text), true, (UnitSize) unitSizeComboBox.SelectedIndex);
                     break;
                 case 4:
-                    unit = new Mechanized(unitNameLabel.Text,short.Parse(unitNumber.Text), true, unitSizeComboBox.Text);
+                    unit = new Mechanized(unitNameLabel.Text,short.Parse(unitNumber.Text), true, (UnitSize) unitSizeComboBox.SelectedIndex);
                     break;
             }
 

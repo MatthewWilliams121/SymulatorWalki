@@ -101,7 +101,7 @@ namespace index
         {
             if (!Battlefield.isFight)
             {
-                selected = 6;
+                selected = 4;
                 if (popUpForm5 != null)
                 {
                     popUpForm5.ShowDialog();
@@ -200,6 +200,23 @@ namespace index
             {
                 unit.CurrentHealth = unit.InitialHealth;
             }
+            refreshForm();
+        }
+
+        private void removeUnit1_Click(object sender, EventArgs e)
+        {
+            Battlefield.attackers[0] = new Unit();
+            refreshForm();
+        }
+
+        private void testujProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void zestaw1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Battlefield.attackers[0]  = new Mechanized("Test", 10, true, UnitSize.Company);
             refreshForm();
         }
     }

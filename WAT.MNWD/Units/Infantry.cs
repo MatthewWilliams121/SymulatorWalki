@@ -9,7 +9,7 @@ namespace index
         // equipment inventory[]
         private readonly Bitmap image = Resources.Team; // nie team tylko infantry
 
-        public Infantry(string name, int identityNumber, bool side, string strength) : base(name, identityNumber, side, strength)
+        public Infantry(string name, int identityNumber, bool side, UnitSize strength) : base(name, identityNumber, side, strength)
         {
             unitImage = Resources.nato_infantry;
             setSizeImageAndOrganization();

@@ -11,7 +11,7 @@ namespace index
         protected string name;
         protected int identityNumber;
         protected float currentHealth;
-        protected string strength;
+        protected UnitSize strength;
         protected bool side;
         
         protected Bitmap strengthImage;
@@ -21,7 +21,7 @@ namespace index
         {
         }
 
-        protected Unit(string name, int identityNumber, bool side, string strength)
+        protected Unit(string name, int identityNumber, bool side, UnitSize strength)
         {
             this.name = name;
             this.identityNumber = identityNumber;
@@ -66,7 +66,7 @@ namespace index
             set => currentHealth = value;
         }
 
-        public string Strength
+        public UnitSize Strength
         {
             get => strength;
             set => strength = value;
@@ -99,23 +99,23 @@ namespace index
         {
             switch (strength)
             {
-                case "Team":
+                case UnitSize.Team:
                     strengthImage = Resources.Team;
                     currentHealth = 1 * 100;
                     break;
-                case "Platoon":
+                case UnitSize.Platoon:
                     strengthImage = Resources.Platoon;
                     currentHealth = 1 * 100;
                     break;
-                case "Company":
+                case UnitSize.Company:
                     strengthImage = Resources.Company;
                     currentHealth = 1 * 100;
                     break;
-                case "Battalion" :
+                case UnitSize.Battalion :
                     strengthImage = Resources.Battalion_f1;
                     currentHealth = 1 * 100;
                     break;
-                case "Brigade":
+                case UnitSize.Brigade:
                     strengthImage = Resources.Brigade;
                     currentHealth = 1 * 100;
                     break;

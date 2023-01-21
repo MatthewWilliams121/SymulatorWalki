@@ -11,7 +11,7 @@ namespace index
             Console.Out.WriteLine("Stworzono jednostkę mechanized");
         }
 
-        public Mechanized(string name, int identityNumber, bool side, string strength) : base(name, identityNumber, side, strength)
+        public Mechanized(string name, int identityNumber, bool side, UnitSize strength) : base(name, identityNumber, side, strength)
         {
             unitImage = Resources.nato_mechanized;
             setSizeImageAndOrganization();

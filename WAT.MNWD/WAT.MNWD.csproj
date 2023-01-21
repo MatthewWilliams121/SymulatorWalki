@@ -72,6 +72,8 @@
         <Compile Include="Units\Mechanized.cs" />
         <Compile Include="Units\Recon.cs" />
         <Compile Include="Units\Unit.cs" />
+        <Compile Include="Units\UnitKind.cs" />
+        <Compile Include="Units\UnitSize.cs" />
         <Compile Include="UnitView.cs" />
         <EmbeddedResource Include="MainForm.resx">
             <DependentUpon>MainForm.cs</DependentUpon>

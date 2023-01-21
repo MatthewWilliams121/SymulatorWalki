@@ -58,18 +58,28 @@
             this.unit4Number = new System.Windows.Forms.Label();
             this.turnLabel = new System.Windows.Forms.Label();
             this.regenerateUnits = new System.Windows.Forms.Button();
+            this.removeUnit3 = new System.Windows.Forms.Button();
+            this.removeUnit2 = new System.Windows.Forms.Button();
+            this.removeUnit1 = new System.Windows.Forms.Button();
+            this.removeUnit6 = new System.Windows.Forms.Button();
+            this.removeUnit5 = new System.Windows.Forms.Button();
+            this.removeUnit4 = new System.Windows.Forms.Button();
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.testujProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zestaw1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.unit3SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit2SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit1SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit6SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit5SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit4SizePicture)).BeginInit();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // unit1Button
             // 
             this.unit1Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.unit1Button.Location = new System.Drawing.Point(113, 415);
+            this.unit1Button.Location = new System.Drawing.Point(110, 456);
             this.unit1Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit1Button.Name = "unit1Button";
             this.unit1Button.Size = new System.Drawing.Size(123, 78);
@@ -79,7 +89,7 @@
             // 
             // unit2Button
             // 
-            this.unit2Button.Location = new System.Drawing.Point(113, 259);
+            this.unit2Button.Location = new System.Drawing.Point(110, 300);
             this.unit2Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit2Button.Name = "unit2Button";
             this.unit2Button.Size = new System.Drawing.Size(123, 78);
@@ -90,7 +100,7 @@
             // unit3Button
             // 
             this.unit3Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.unit3Button.Location = new System.Drawing.Point(113, 98);
+            this.unit3Button.Location = new System.Drawing.Point(110, 139);
             this.unit3Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit3Button.Name = "unit3Button";
             this.unit3Button.Size = new System.Drawing.Size(123, 81);
@@ -100,7 +110,7 @@
             // 
             // unit6Button
             // 
-            this.unit6Button.Location = new System.Drawing.Point(527, 98);
+            this.unit6Button.Location = new System.Drawing.Point(524, 139);
             this.unit6Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit6Button.Name = "unit6Button";
             this.unit6Button.Size = new System.Drawing.Size(123, 81);
@@ -110,7 +120,7 @@
             // 
             // unit5Button
             // 
-            this.unit5Button.Location = new System.Drawing.Point(527, 260);
+            this.unit5Button.Location = new System.Drawing.Point(524, 301);
             this.unit5Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit5Button.Name = "unit5Button";
             this.unit5Button.Size = new System.Drawing.Size(123, 78);
@@ -120,7 +130,7 @@
             // 
             // unit4Button
             // 
-            this.unit4Button.Location = new System.Drawing.Point(527, 416);
+            this.unit4Button.Location = new System.Drawing.Point(524, 457);
             this.unit4Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit4Button.Name = "unit4Button";
             this.unit4Button.Size = new System.Drawing.Size(123, 78);
@@ -130,7 +140,7 @@
             // 
             // simulateButton
             // 
-            this.simulateButton.Location = new System.Drawing.Point(331, 573);
+            this.simulateButton.Location = new System.Drawing.Point(328, 614);
             this.simulateButton.Margin = new System.Windows.Forms.Padding(2);
             this.simulateButton.Name = "simulateButton";
             this.simulateButton.Size = new System.Drawing.Size(98, 38);
@@ -141,7 +151,7 @@
             // 
             // switchSidesButton
             // 
-            this.switchSidesButton.Location = new System.Drawing.Point(331, 532);
+            this.switchSidesButton.Location = new System.Drawing.Point(328, 573);
             this.switchSidesButton.Margin = new System.Windows.Forms.Padding(2);
             this.switchSidesButton.Name = "switchSidesButton";
             this.switchSidesButton.Size = new System.Drawing.Size(98, 26);
@@ -154,7 +164,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(128, 10);
+            this.label1.Location = new System.Drawing.Point(125, 51);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 33);
@@ -165,7 +175,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(527, 10);
+            this.label2.Location = new System.Drawing.Point(524, 51);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(147, 33);
@@ -174,7 +184,7 @@
             // 
             // unit1ProgressBar
             // 
-            this.unit1ProgressBar.Location = new System.Drawing.Point(113, 497);
+            this.unit1ProgressBar.Location = new System.Drawing.Point(110, 538);
             this.unit1ProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.unit1ProgressBar.Name = "unit1ProgressBar";
             this.unit1ProgressBar.Size = new System.Drawing.Size(123, 9);
@@ -182,7 +192,7 @@
             // 
             // unit2ProgressBar
             // 
-            this.unit2ProgressBar.Location = new System.Drawing.Point(113, 341);
+            this.unit2ProgressBar.Location = new System.Drawing.Point(110, 382);
             this.unit2ProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.unit2ProgressBar.Name = "unit2ProgressBar";
             this.unit2ProgressBar.Size = new System.Drawing.Size(123, 9);
@@ -190,7 +200,7 @@
             // 
             // unit3ProgressBar
             // 
-            this.unit3ProgressBar.Location = new System.Drawing.Point(113, 183);
+            this.unit3ProgressBar.Location = new System.Drawing.Point(110, 224);
             this.unit3ProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.unit3ProgressBar.Name = "unit3ProgressBar";
             this.unit3ProgressBar.Size = new System.Drawing.Size(123, 9);
@@ -198,7 +208,7 @@
             // 
             // unit6ProgressBar
             // 
-            this.unit6ProgressBar.Location = new System.Drawing.Point(527, 183);
+            this.unit6ProgressBar.Location = new System.Drawing.Point(524, 224);
             this.unit6ProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.unit6ProgressBar.Name = "unit6ProgressBar";
             this.unit6ProgressBar.Size = new System.Drawing.Size(123, 9);
@@ -206,7 +216,7 @@
             // 
             // unit5ProgressBar
             // 
-            this.unit5ProgressBar.Location = new System.Drawing.Point(527, 342);
+            this.unit5ProgressBar.Location = new System.Drawing.Point(524, 383);
             this.unit5ProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.unit5ProgressBar.Name = "unit5ProgressBar";
             this.unit5ProgressBar.Size = new System.Drawing.Size(123, 10);
@@ -214,7 +224,7 @@
             // 
             // unit4ProgressBar
             // 
-            this.unit4ProgressBar.Location = new System.Drawing.Point(527, 498);
+            this.unit4ProgressBar.Location = new System.Drawing.Point(524, 539);
             this.unit4ProgressBar.Margin = new System.Windows.Forms.Padding(2);
             this.unit4ProgressBar.Name = "unit4ProgressBar";
             this.unit4ProgressBar.Size = new System.Drawing.Size(123, 9);
@@ -222,7 +232,7 @@
             // 
             // unit3SizePicture
             // 
-            this.unit3SizePicture.Location = new System.Drawing.Point(140, 72);
+            this.unit3SizePicture.Location = new System.Drawing.Point(137, 113);
             this.unit3SizePicture.Margin = new System.Windows.Forms.Padding(2);
             this.unit3SizePicture.Name = "unit3SizePicture";
             this.unit3SizePicture.Size = new System.Drawing.Size(70, 22);
@@ -232,7 +242,7 @@
             // 
             // unit2SizePicture
             // 
-            this.unit2SizePicture.Location = new System.Drawing.Point(140, 233);
+            this.unit2SizePicture.Location = new System.Drawing.Point(137, 274);
             this.unit2SizePicture.Margin = new System.Windows.Forms.Padding(2);
             this.unit2SizePicture.Name = "unit2SizePicture";
             this.unit2SizePicture.Size = new System.Drawing.Size(70, 22);
@@ -242,7 +252,7 @@
             // 
             // unit1SizePicture
             // 
-            this.unit1SizePicture.Location = new System.Drawing.Point(140, 389);
+            this.unit1SizePicture.Location = new System.Drawing.Point(137, 430);
             this.unit1SizePicture.Margin = new System.Windows.Forms.Padding(2);
             this.unit1SizePicture.Name = "unit1SizePicture";
             this.unit1SizePicture.Size = new System.Drawing.Size(70, 22);
@@ -252,7 +262,7 @@
             // 
             // unit6SizePicture
             // 
-            this.unit6SizePicture.Location = new System.Drawing.Point(555, 73);
+            this.unit6SizePicture.Location = new System.Drawing.Point(552, 114);
             this.unit6SizePicture.Margin = new System.Windows.Forms.Padding(2);
             this.unit6SizePicture.Name = "unit6SizePicture";
             this.unit6SizePicture.Size = new System.Drawing.Size(70, 22);
@@ -262,7 +272,7 @@
             // 
             // unit5SizePicture
             // 
-            this.unit5SizePicture.Location = new System.Drawing.Point(555, 234);
+            this.unit5SizePicture.Location = new System.Drawing.Point(552, 275);
             this.unit5SizePicture.Margin = new System.Windows.Forms.Padding(2);
             this.unit5SizePicture.Name = "unit5SizePicture";
             this.unit5SizePicture.Size = new System.Drawing.Size(70, 22);
@@ -272,7 +282,7 @@
             // 
             // unit4SizePicture
             // 
-            this.unit4SizePicture.Location = new System.Drawing.Point(555, 390);
+            this.unit4SizePicture.Location = new System.Drawing.Point(552, 431);
             this.unit4SizePicture.Margin = new System.Windows.Forms.Padding(2);
             this.unit4SizePicture.Name = "unit4SizePicture";
             this.unit4SizePicture.Size = new System.Drawing.Size(70, 22);
@@ -283,7 +293,7 @@
             // unit1Number
             // 
             this.unit1Number.AutoSize = true;
-            this.unit1Number.Location = new System.Drawing.Point(80, 448);
+            this.unit1Number.Location = new System.Drawing.Point(77, 489);
             this.unit1Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit1Number.Name = "unit1Number";
             this.unit1Number.Size = new System.Drawing.Size(0, 13);
@@ -292,7 +302,7 @@
             // unit2Number
             // 
             this.unit2Number.AutoSize = true;
-            this.unit2Number.Location = new System.Drawing.Point(65, 295);
+            this.unit2Number.Location = new System.Drawing.Point(62, 336);
             this.unit2Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit2Number.Name = "unit2Number";
             this.unit2Number.Size = new System.Drawing.Size(0, 13);
@@ -301,7 +311,7 @@
             // unit3Number
             // 
             this.unit3Number.AutoSize = true;
-            this.unit3Number.Location = new System.Drawing.Point(65, 132);
+            this.unit3Number.Location = new System.Drawing.Point(62, 173);
             this.unit3Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit3Number.Name = "unit3Number";
             this.unit3Number.Size = new System.Drawing.Size(0, 13);
@@ -310,7 +320,7 @@
             // unit6Number
             // 
             this.unit6Number.AutoSize = true;
-            this.unit6Number.Location = new System.Drawing.Point(495, 133);
+            this.unit6Number.Location = new System.Drawing.Point(492, 174);
             this.unit6Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit6Number.Name = "unit6Number";
             this.unit6Number.Size = new System.Drawing.Size(0, 13);
@@ -319,7 +329,7 @@
             // unit5Number
             // 
             this.unit5Number.AutoSize = true;
-            this.unit5Number.Location = new System.Drawing.Point(495, 296);
+            this.unit5Number.Location = new System.Drawing.Point(492, 337);
             this.unit5Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit5Number.Name = "unit5Number";
             this.unit5Number.Size = new System.Drawing.Size(0, 13);
@@ -328,7 +338,7 @@
             // unit4Number
             // 
             this.unit4Number.AutoSize = true;
-            this.unit4Number.Location = new System.Drawing.Point(495, 449);
+            this.unit4Number.Location = new System.Drawing.Point(492, 490);
             this.unit4Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit4Number.Name = "unit4Number";
             this.unit4Number.Size = new System.Drawing.Size(0, 13);
@@ -338,7 +348,7 @@
             // 
             this.turnLabel.AutoSize = true;
             this.turnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.turnLabel.Location = new System.Drawing.Point(266, 34);
+            this.turnLabel.Location = new System.Drawing.Point(263, 75);
             this.turnLabel.Name = "turnLabel";
             this.turnLabel.Size = new System.Drawing.Size(0, 29);
             this.turnLabel.TabIndex = 29;
@@ -346,7 +356,7 @@
             // 
             // regenerateUnits
             // 
-            this.regenerateUnits.Location = new System.Drawing.Point(248, 548);
+            this.regenerateUnits.Location = new System.Drawing.Point(245, 589);
             this.regenerateUnits.Name = "regenerateUnits";
             this.regenerateUnits.Size = new System.Drawing.Size(69, 42);
             this.regenerateUnits.TabIndex = 30;
@@ -354,12 +364,96 @@
             this.regenerateUnits.UseVisualStyleBackColor = true;
             this.regenerateUnits.Click += new System.EventHandler(this.regenerateUnitsButton_Click);
             // 
+            // removeUnit3
+            // 
+            this.removeUnit3.Location = new System.Drawing.Point(238, 139);
+            this.removeUnit3.Name = "removeUnit3";
+            this.removeUnit3.Size = new System.Drawing.Size(17, 25);
+            this.removeUnit3.TabIndex = 31;
+            this.removeUnit3.Text = "button1";
+            this.removeUnit3.UseVisualStyleBackColor = true;
+            // 
+            // removeUnit2
+            // 
+            this.removeUnit2.Location = new System.Drawing.Point(238, 301);
+            this.removeUnit2.Name = "removeUnit2";
+            this.removeUnit2.Size = new System.Drawing.Size(17, 25);
+            this.removeUnit2.TabIndex = 32;
+            this.removeUnit2.Text = "button2";
+            this.removeUnit2.UseVisualStyleBackColor = true;
+            // 
+            // removeUnit1
+            // 
+            this.removeUnit1.Location = new System.Drawing.Point(238, 457);
+            this.removeUnit1.Name = "removeUnit1";
+            this.removeUnit1.Size = new System.Drawing.Size(17, 25);
+            this.removeUnit1.TabIndex = 33;
+            this.removeUnit1.Text = "button3";
+            this.removeUnit1.UseVisualStyleBackColor = true;
+            this.removeUnit1.Click += new System.EventHandler(this.removeUnit1_Click);
+            // 
+            // removeUnit6
+            // 
+            this.removeUnit6.Location = new System.Drawing.Point(502, 139);
+            this.removeUnit6.Name = "removeUnit6";
+            this.removeUnit6.Size = new System.Drawing.Size(17, 25);
+            this.removeUnit6.TabIndex = 34;
+            this.removeUnit6.Text = "button4";
+            this.removeUnit6.UseVisualStyleBackColor = true;
+            // 
+            // removeUnit5
+            // 
+            this.removeUnit5.Location = new System.Drawing.Point(502, 301);
+            this.removeUnit5.Name = "removeUnit5";
+            this.removeUnit5.Size = new System.Drawing.Size(17, 25);
+            this.removeUnit5.TabIndex = 35;
+            this.removeUnit5.Text = "button5";
+            this.removeUnit5.UseVisualStyleBackColor = true;
+            // 
+            // removeUnit4
+            // 
+            this.removeUnit4.Location = new System.Drawing.Point(502, 457);
+            this.removeUnit4.Name = "removeUnit4";
+            this.removeUnit4.Size = new System.Drawing.Size(17, 25);
+            this.removeUnit4.TabIndex = 36;
+            this.removeUnit4.Text = "button6";
+            this.removeUnit4.UseVisualStyleBackColor = true;
+            // 
+            // menu
+            // 
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.testujProgramToolStripMenuItem });
+            this.menu.Location = new System.Drawing.Point(0, 0);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(764, 24);
+            this.menu.TabIndex = 37;
+            this.menu.Text = "menuStrip1";
+            // 
+            // testujProgramToolStripMenuItem
+            // 
+            this.testujProgramToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.zestaw1ToolStripMenuItem });
+            this.testujProgramToolStripMenuItem.Name = "testujProgramToolStripMenuItem";
+            this.testujProgramToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.testujProgramToolStripMenuItem.Text = "Testuj program";
+            // 
+            // zestaw1ToolStripMenuItem
+            // 
+            this.zestaw1ToolStripMenuItem.Name = "zestaw1ToolStripMenuItem";
+            this.zestaw1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.zestaw1ToolStripMenuItem.Text = "Zestaw 1";
+            this.zestaw1ToolStripMenuItem.Click += new System.EventHandler(this.zestaw1ToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(764, 626);
+            this.ClientSize = new System.Drawing.Size(764, 664);
+            this.Controls.Add(this.removeUnit4);
+            this.Controls.Add(this.removeUnit5);
+            this.Controls.Add(this.removeUnit6);
+            this.Controls.Add(this.removeUnit1);
+            this.Controls.Add(this.removeUnit2);
+            this.Controls.Add(this.removeUnit3);
             this.Controls.Add(this.regenerateUnits);
             this.Controls.Add(this.turnLabel);
             this.Controls.Add(this.unit4Number);
@@ -390,8 +484,10 @@
             this.Controls.Add(this.unit3Button);
             this.Controls.Add(this.unit2Button);
             this.Controls.Add(this.unit1Button);
+            this.Controls.Add(this.menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(15, 15);
+            this.MainMenuStrip = this.menu;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -403,9 +499,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.unit6SizePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit5SizePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit4SizePicture)).EndInit();
+            this.menu.ResumeLayout(false);
+            this.menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.MenuStrip menu;
+
+        private System.Windows.Forms.ToolStripMenuItem testujProgramToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zestaw1ToolStripMenuItem;
+
+        private System.Windows.Forms.Button removeUnit3;
+        private System.Windows.Forms.Button removeUnit2;
+        private System.Windows.Forms.Button removeUnit1;
+        private System.Windows.Forms.Button removeUnit6;
+        private System.Windows.Forms.Button removeUnit5;
+        private System.Windows.Forms.Button removeUnit4;
 
         private System.Windows.Forms.Button regenerateUnits;
 
