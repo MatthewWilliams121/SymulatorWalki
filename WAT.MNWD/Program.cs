@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace index
@@ -9,15 +6,14 @@ namespace index
     internal static class Program
     {
         /// <summary>
-        /// Główny punkt wejścia dla aplikacji.
+        ///     Główny punkt wejścia dla aplikacji.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
-           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Form1 form = new Form1();
+            var form = new MainForm();
             Application.Run(form);
         }
     }

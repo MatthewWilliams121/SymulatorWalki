@@ -1,6 +1,6 @@
 ﻿namespace index
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Wymagana zmienna projektanta.
@@ -342,9 +342,9 @@
             this.Controls.Add(this.unit2Button);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.unit1Button);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.MainFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.unit3SizePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit2SizePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit1SizePicture)).EndInit();
