@@ -139,8 +139,8 @@
             PublicKeyToken=b03f5f7f11d50a3a
         </value>
     </data>
-    <data name="nato_mechanized" type="System.Resources.ResXFileRef, System.Windows.Forms">
-        <value>..\Resources\nato_mechanized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral,
+    <data name="Brigade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\Resources\Brigade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral,
             PublicKeyToken=b03f5f7f11d50a3a
         </value>
     </data>
@@ -149,8 +149,41 @@
             PublicKeyToken=b03f5f7f11d50a3a
         </value>
     </data>
-    <data name="nato_arty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <data name="Company" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\Resources\company.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b03f5f7f11d50a3a
+        </value>
+    </data>
+    <data name="Battalion_f1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\Resources\Battalion_f1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b03f5f7f11d50a3a
+        </value>
+    </data>
+    
+    <data name="nato_mechanized" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\Resources\nato_mechanized.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b03f5f7f11d50a3a
+        </value>
+    </data>
+
+    
+    <data name="nato_artilery" type="System.Resources.ResXFileRef, System.Windows.Forms">
         <value>..\Resources\nato_arty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b03f5f7f11d50a3a
+        </value>
+    </data>
+    <data name="nato_infantry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\Resources\nato_infantry_f2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b03f5f7f11d50a3a
+        </value>
+    </data>
+    <data name="nato_recon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\Resources\nato_recon_f2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b03f5f7f11d50a3a
+        </value>
+    </data>
+    <data name="nato_armoured" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>..\Resources\nato_armour_f2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral,
             PublicKeyToken=b03f5f7f11d50a3a
         </value>
     </data>

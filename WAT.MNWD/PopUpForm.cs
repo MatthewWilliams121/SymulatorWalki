@@ -31,13 +31,14 @@ namespace index
                 "Mechanized"
             });
             unitKind.Enabled = false;
+            unitSizeComboBox.Enabled = false;
         }
 
         private void PopUpFormLoad(object sender, EventArgs e)
         {
             checkBoxNATO.Enabled = false;
             checkBoxCSTO.Enabled = false;
-
+            
             if (mainForm.getSelected() < 3)
                 checkBoxNATO.Checked = true;
             else
@@ -50,17 +51,17 @@ namespace index
                 checkBoxCSTO.Checked = false;
             else if (unitKind.Enabled == false) unitKind.Enabled = true;
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
+        
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxCSTO.Checked && checkBoxNATO.Checked)
                 checkBoxNATO.Checked = false;
             else if (unitKind.Enabled == false) unitKind.Enabled = true;
         }
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+        
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -68,9 +69,25 @@ namespace index
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (unitSizeComboBox.SelectedIndex == 0)
-                pictureSize.Image = Resources.Team;
-            else if (unitSizeComboBox.SelectedIndex == 1) pictureSize.Image = Resources.Platoon;
+            
+            switch (unitSizeComboBox.SelectedIndex)
+            {
+                case 0:
+                    pictureSize.Image = Resources.Team;
+                    break;
+                case 1:
+                    pictureSize.Image = Resources.Platoon;
+                    break;
+                case 2:
+                    pictureSize.Image = Resources.Company;
+                    break;
+                case 3 :
+                    pictureSize.Image = Resources.Battalion_f1;
+                    break;
+                case 4:
+                    pictureSize.Image = Resources.Brigade;
+                    break;
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -96,7 +113,7 @@ namespace index
         // Unit name
         private void UnitName_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(unitNameLabel.Text, "^[AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻż0-9 ]*$"))
+            if (Regex.IsMatch(unitNameLabel.Text, "^[AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyssssssdqddwqqqqqaaaaaZzŹźŻżXxQqVv0-9 ]*$"))
             {
                 captionUnitName.Text = unitNameLabel.Text;
             }
@@ -114,7 +131,27 @@ namespace index
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (unitKind.SelectedIndex == 4) pictureType.Image = Resources.nato_mechanized;
+            switch (unitKind.SelectedIndex)
+            {
+
+                case 0:
+                    pictureType.Image = Resources.nato_infantry;
+                    break;
+                case 1:
+                    pictureType.Image = Resources.nato_armoured;
+                    break;
+                case 2:
+                    pictureType.Image = Resources.nato_recon;
+                    break;
+                case 3:
+                    pictureType.Image = Resources.nato_artilery;
+                    break;
+                case 4:
+                    pictureType.Image = Resources.nato_mechanized;
+                    break;
+            }
+            if (unitKind.Enabled) unitSizeComboBox.Enabled = true;
+
         }
 
         private void saveUnitButton_Click(object sender, EventArgs e)
@@ -147,7 +184,6 @@ namespace index
                     break;
             }
 
-            Console.Out.WriteLine(unit.Name);
             if (mainForm.getSelected() < 3)
                 Battlefield.attacker[mainForm.getSelected()] = unit;
             else

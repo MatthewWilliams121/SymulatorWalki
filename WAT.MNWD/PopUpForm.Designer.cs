@@ -94,8 +94,9 @@
             // 
             // unitSizeComboBox
             // 
+            this.unitSizeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.unitSizeComboBox.FormattingEnabled = true;
-            this.unitSizeComboBox.Location = new System.Drawing.Point(262, 59);
+            this.unitSizeComboBox.Location = new System.Drawing.Point(105, 197);
             this.unitSizeComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.unitSizeComboBox.Name = "unitSizeComboBox";
             this.unitSizeComboBox.Size = new System.Drawing.Size(92, 21);
@@ -105,7 +106,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(260, 35);
+            this.label2.Location = new System.Drawing.Point(8, 197);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 13);
@@ -136,7 +137,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(382, 294);
+            this.label4.Location = new System.Drawing.Point(315, 156);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 13);
@@ -144,6 +145,7 @@
             // 
             // unitKind
             // 
+            this.unitKind.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.unitKind.FormattingEnabled = true;
             this.unitKind.Location = new System.Drawing.Point(104, 145);
             this.unitKind.Margin = new System.Windows.Forms.Padding(2);
@@ -155,7 +157,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(2, 148);
+            this.label5.Location = new System.Drawing.Point(8, 148);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 13);
@@ -164,7 +166,7 @@
             // 
             // pictureType
             // 
-            this.pictureType.Location = new System.Drawing.Point(406, 255);
+            this.pictureType.Location = new System.Drawing.Point(339, 117);
             this.pictureType.Margin = new System.Windows.Forms.Padding(2);
             this.pictureType.Name = "pictureType";
             this.pictureType.Size = new System.Drawing.Size(134, 89);
@@ -174,7 +176,7 @@
             // 
             // pictureSize
             // 
-            this.pictureSize.Location = new System.Drawing.Point(447, 220);
+            this.pictureSize.Location = new System.Drawing.Point(380, 82);
             this.pictureSize.Margin = new System.Windows.Forms.Padding(2);
             this.pictureSize.Name = "pictureSize";
             this.pictureSize.Size = new System.Drawing.Size(53, 30);
@@ -185,39 +187,39 @@
             // 
             // saveUnitButton
             // 
-            this.saveUnitButton.Location = new System.Drawing.Point(146, 318);
+            this.saveUnitButton.Location = new System.Drawing.Point(288, 328);
             this.saveUnitButton.Margin = new System.Windows.Forms.Padding(2);
             this.saveUnitButton.Name = "saveUnitButton";
             this.saveUnitButton.Size = new System.Drawing.Size(96, 26);
             this.saveUnitButton.TabIndex = 14;
             this.saveUnitButton.Text = "Zatwierdź";
-            this.saveUnitButton.UseVisualStyleBackColor = true;
+            this.saveUnitButton.UseVisualStyleBackColor = false;
             this.saveUnitButton.Click += new System.EventHandler(this.saveUnitButton_Click);
             // 
             // cancelUnitButton
             // 
-            this.cancelUnitButton.Location = new System.Drawing.Point(28, 317);
+            this.cancelUnitButton.Location = new System.Drawing.Point(170, 328);
             this.cancelUnitButton.Name = "cancelUnitButton";
-            this.cancelUnitButton.Size = new System.Drawing.Size(96, 27);
+            this.cancelUnitButton.Size = new System.Drawing.Size(96, 26);
             this.cancelUnitButton.TabIndex = 15;
             this.cancelUnitButton.Text = "Wróć";
-            this.cancelUnitButton.UseVisualStyleBackColor = true;
+            this.cancelUnitButton.UseVisualStyleBackColor = false;
             this.cancelUnitButton.Click += new System.EventHandler(this.cancelUnitButton_Click);
             // 
             // captionUnitName
             // 
-            this.captionUnitName.Location = new System.Drawing.Point(406, 357);
+            this.captionUnitName.Location = new System.Drawing.Point(339, 219);
             this.captionUnitName.Name = "captionUnitName";
             this.captionUnitName.Size = new System.Drawing.Size(133, 22);
             this.captionUnitName.TabIndex = 16;
-            this.captionUnitName.Text = "label6";
             // 
-            // PopUpForm
+            // choosingUnit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(750, 457);
+            this.ClientSize = new System.Drawing.Size(558, 391);
+            this.ControlBox = false;
             this.Controls.Add(this.captionUnitName);
             this.Controls.Add(this.cancelUnitButton);
             this.Controls.Add(this.saveUnitButton);
@@ -234,14 +236,21 @@
             this.Controls.Add(this.unitNameLabel);
             this.Controls.Add(this.checkBoxCSTO);
             this.Controls.Add(this.checkBoxNATO);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(15, 15);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "PopUpForm";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "choosingUnit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Wybór jednostki";
             ((System.ComponentModel.ISupportInitialize)(this.pictureType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSize)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ComboBox unitSizeComboBox;
 
         private System.Windows.Forms.Label captionUnitName;
 
@@ -253,7 +262,6 @@
         private System.Windows.Forms.CheckBox checkBoxCSTO;
         private System.Windows.Forms.TextBox unitNameLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox unitSizeComboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox unitNumber;
         private System.Windows.Forms.Label label3;

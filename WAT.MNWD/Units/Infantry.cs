@@ -10,8 +10,8 @@ namespace index
         private readonly Bitmap image = Resources.Team; // nie team tylko infantry
 
         public Infantry(string name, int identityNumber, bool side, string strength) : base(name, identityNumber, side, strength)
-        { 
-            unitImage = Resources.nato;
+        {
+            unitImage = Resources.nato_infantry;
             setSizeImageAndOrganization();
         }
 

@@ -97,17 +97,29 @@ namespace index
 
         public void setSizeImageAndOrganization()
         {
-            if (strength.Equals("Team"))
+            switch (strength)
             {
-                strengthImage = Resources.Team;
-                currentHealth = 1 * 100;
+                case "Team":
+                    strengthImage = Resources.Team;
+                    currentHealth = 1 * 100;
+                    break;
+                case "Platoon":
+                    strengthImage = Resources.Platoon;
+                    currentHealth = 4 * 100;
+                    break;
+                case "Company":
+                    strengthImage = Resources.Company;
+                    currentHealth = 1 * 100;
+                    break;
+                case "Battalion" :
+                    strengthImage = Resources.Battalion_f1;
+                    currentHealth = 1 * 100;
+                    break;
+                case "Brigade":
+                    strengthImage = Resources.Brigade;
+                    currentHealth = 1 * 100;
+                    break;
             }
-            else if (strength.Equals("Platoon"))
-            {
-                strengthImage = Resources.Platoon;
-                currentHealth = 4 * 100;
-            }
-            //...
         }
     }
 }

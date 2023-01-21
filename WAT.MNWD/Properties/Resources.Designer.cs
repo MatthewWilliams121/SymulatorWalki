@@ -62,6 +62,36 @@ namespace index.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Battalion_f1 {
+            get {
+                object obj = ResourceManager.GetObject("Battalion_f1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Brigade {
+            get {
+                object obj = ResourceManager.GetObject("Brigade", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Company {
+            get {
+                object obj = ResourceManager.GetObject("Company", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nato {
             get {
                 object obj = ResourceManager.GetObject("nato", resourceCulture);
@@ -72,9 +102,29 @@ namespace index.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap nato_arty {
+        internal static System.Drawing.Bitmap nato_armoured {
             get {
-                object obj = ResourceManager.GetObject("nato_arty", resourceCulture);
+                object obj = ResourceManager.GetObject("nato_armoured", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nato_artilery {
+            get {
+                object obj = ResourceManager.GetObject("nato_artilery", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nato_infantry {
+            get {
+                object obj = ResourceManager.GetObject("nato_infantry", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -85,6 +135,16 @@ namespace index.Properties {
         internal static System.Drawing.Bitmap nato_mechanized {
             get {
                 object obj = ResourceManager.GetObject("nato_mechanized", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nato_recon {
+            get {
+                object obj = ResourceManager.GetObject("nato_recon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
