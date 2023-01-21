@@ -234,9 +234,11 @@
             this.Controls.Add(this.unitNameLabel);
             this.Controls.Add(this.checkBoxCSTO);
             this.Controls.Add(this.checkBoxNATO);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Location = new System.Drawing.Point(15, 15);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PopUpForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             ((System.ComponentModel.ISupportInitialize)(this.pictureType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureSize)).EndInit();
             this.ResumeLayout(false);
