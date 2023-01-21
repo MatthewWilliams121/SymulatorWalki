@@ -294,7 +294,7 @@
             // unit1Number
             // 
             this.unit1Number.AutoSize = true;
-            this.unit1Number.Location = new System.Drawing.Point(77, 489);
+            this.unit1Number.Location = new System.Drawing.Point(93, 535);
             this.unit1Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit1Number.Name = "unit1Number";
             this.unit1Number.Size = new System.Drawing.Size(13, 13);
@@ -304,7 +304,7 @@
             // unit2Number
             // 
             this.unit2Number.AutoSize = true;
-            this.unit2Number.Location = new System.Drawing.Point(77, 334);
+            this.unit2Number.Location = new System.Drawing.Point(93, 378);
             this.unit2Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit2Number.Name = "unit2Number";
             this.unit2Number.Size = new System.Drawing.Size(13, 13);
@@ -314,7 +314,7 @@
             // unit3Number
             // 
             this.unit3Number.AutoSize = true;
-            this.unit3Number.Location = new System.Drawing.Point(77, 173);
+            this.unit3Number.Location = new System.Drawing.Point(93, 220);
             this.unit3Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit3Number.Name = "unit3Number";
             this.unit3Number.Size = new System.Drawing.Size(13, 13);
@@ -324,7 +324,7 @@
             // unit6Number
             // 
             this.unit6Number.AutoSize = true;
-            this.unit6Number.Location = new System.Drawing.Point(492, 173);
+            this.unit6Number.Location = new System.Drawing.Point(507, 220);
             this.unit6Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit6Number.Name = "unit6Number";
             this.unit6Number.Size = new System.Drawing.Size(13, 13);
@@ -334,7 +334,7 @@
             // unit5Number
             // 
             this.unit5Number.AutoSize = true;
-            this.unit5Number.Location = new System.Drawing.Point(492, 336);
+            this.unit5Number.Location = new System.Drawing.Point(507, 378);
             this.unit5Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit5Number.Name = "unit5Number";
             this.unit5Number.Size = new System.Drawing.Size(13, 13);
@@ -344,7 +344,7 @@
             // unit4Number
             // 
             this.unit4Number.AutoSize = true;
-            this.unit4Number.Location = new System.Drawing.Point(494, 490);
+            this.unit4Number.Location = new System.Drawing.Point(507, 534);
             this.unit4Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit4Number.Name = "unit4Number";
             this.unit4Number.Size = new System.Drawing.Size(13, 13);
