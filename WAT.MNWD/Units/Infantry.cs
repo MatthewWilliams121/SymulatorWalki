@@ -9,12 +9,9 @@ namespace index
         // equipment inventory[]
         private readonly Bitmap image = Resources.Team; // nie team tylko infantry
 
-        public Infantry(string name, string strength, bool side, int identityNumber) : base(name, identityNumber, side, strength)
-        {
-            this.name = name;
-            this.strength = strength;
-            this.identityNumber = identityNumber;
-            this.side = side;
+        public Infantry(string name, int identityNumber, bool side, string strength) : base(name, identityNumber, side, strength)
+        { 
+            unitImage = Resources.nato;
             setSizeImageAndOrganization();
         }
 
@@ -35,11 +32,6 @@ namespace index
         public int GetArmor()
         {
             return 0;
-        }
-
-        public Bitmap getImageUnit()
-        {
-            return image;
         }
     }
 }

@@ -96,7 +96,7 @@ namespace index
         // Unit name
         private void UnitName_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(unitNameLabel.Text, "^[a-zA-Z0-9 ]*$"))
+            if (Regex.IsMatch(unitNameLabel.Text, "^[AaĄąBbCcĆćDdEeĘęFfGgHhIiJjKkLlŁłMmNnŃńOoÓóPpRrSsŚśTtUuWwYyZzŹźŻż0-9 ]*$"))
             {
                 captionUnitName.Text = unitNameLabel.Text;
             }
@@ -125,33 +125,25 @@ namespace index
                 MessageBox.Show("Uzupełnij wszystkie pola.", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // var unit = new Mechanized(unitNameLabel.Text, unitSizeComboBox.Text, true,
-                // short.Parse(unitNumber.Text)); // TO OGARNIJ WOJTEK
-
+            
             Unit unit = new Unit();
 
             switch (unitKind.SelectedIndex)
             {
                 case 0:
-                    unit = new Infantry(unitNameLabel.Text, unitSizeComboBox.Text, true,
-                        short.Parse(unitNumber.Text));
+                    unit = new Infantry(unitNameLabel.Text,short.Parse(unitNumber.Text), true, unitSizeComboBox.Text);
                     break;
                 case 1:
-                    // unit = new Armoured(unitNameLabel.Text, unitSizeComboBox.Text, true,
-                    //     short.Parse(unitNumber.Text));
+                    unit = new Armoured(unitNameLabel.Text,short.Parse(unitNumber.Text), true, unitSizeComboBox.Text);
                     break;
                 case 2:
-                    // unit = new Recon(unitNameLabel.Text, unitSizeComboBox.Text, true,
-                    //     short.Parse(unitNumber.Text));
+                    unit = new Recon(unitNameLabel.Text,short.Parse(unitNumber.Text), true, unitSizeComboBox.Text);
                     break;
                 case 3:
-                    // unit = new Artillery(unitNameLabel.Text, unitSizeComboBox.Text, true,
-                    //     short.Parse(unitNumber.Text));
+                    unit = new Artillery(unitNameLabel.Text,short.Parse(unitNumber.Text), true, unitSizeComboBox.Text);
                     break;
                 case 4:
-                    unit = new Mechanized(unitNameLabel.Text, unitSizeComboBox.Text, true,
-                        short.Parse(unitNumber.Text));
+                    unit = new Mechanized(unitNameLabel.Text,short.Parse(unitNumber.Text), true, unitSizeComboBox.Text);
                     break;
             }
 

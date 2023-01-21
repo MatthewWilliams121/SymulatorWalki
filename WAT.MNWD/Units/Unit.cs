@@ -97,12 +97,12 @@ namespace index
 
         public void setSizeImageAndOrganization()
         {
-            if (strength == "Team")
+            if (strength.Equals("Team"))
             {
                 strengthImage = Resources.Team;
                 currentHealth = 1 * 100;
             }
-            else if (strength == "Platoon")
+            else if (strength.Equals("Platoon"))
             {
                 strengthImage = Resources.Platoon;
                 currentHealth = 4 * 100;

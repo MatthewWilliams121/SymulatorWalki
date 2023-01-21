@@ -11,14 +11,9 @@ namespace index
             Console.Out.WriteLine("Stworzono jednostkę mechanized");
         }
 
-        public Mechanized(string name, string strength, bool side, int identityNumber) : base(name, identityNumber, side, strength)
+        public Mechanized(string name, int identityNumber, bool side, string strength) : base(name, identityNumber, side, strength)
         {
-            this.name = name;
-            this.identityNumber = identityNumber;
-            this.strength = strength;
-            this.side = side;
-            // this.SizeImage = strength;
-            this.unitImage = Resources.nato_mechanized;
+            unitImage = Resources.nato_mechanized;
             setSizeImageAndOrganization();
         }
         
