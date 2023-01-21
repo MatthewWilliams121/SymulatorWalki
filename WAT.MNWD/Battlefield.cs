@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -9,30 +10,29 @@ namespace index
         private static readonly SemaphoreSlim attack_sem = new SemaphoreSlim(1, 1);
         private static readonly SemaphoreSlim defend_sem = new SemaphoreSlim(0, 1);
         private static MainForm form;
+        private static bool turn; //true - offense ; false - defense 
+        public static bool Turn
+        {
+            get => turn;
+            set => turn = value;
+        }
 
-        public static List<Unit> attacker = new List<Unit>
+        public static List<Unit> attackers = new List<Unit>
         {
             new Unit(),
             new Unit(),
             new Unit()
         };
 
-        public static List<Unit> defender = new List<Unit>
+        public static List<Unit> defenders = new List<Unit>
         {
             new Unit(),
             new Unit(),
             new Unit()
         };
 
-        private static float get_attacker_value()
-        {
-            return 0;
-        }
-
-        private static float get_defender_value()
-        {
-            return 0;
-        }
+        public static bool isFight;
+        
 
         public static void switchSides(MainForm f1)
         {
@@ -43,13 +43,13 @@ namespace index
                 new Unit(),
                 new Unit()
             };
-            temp = attacker;
-            attacker = defender;
-            defender = temp;
+            temp = attackers;
+            attackers = defenders;
+            defenders = temp;
             form.refreshForm();
         }
 
-        private static bool anyoneAlive(List<Unit> units)
+        public static bool isAnyoneAlive(List<Unit> units)
         {
             foreach (var el in units)
                 if (el.CurrentHealth > 0)
@@ -78,6 +78,7 @@ namespace index
         public static void resolve(MainForm f1)
         {
             form = f1;
+            isFight = true;
             AttackThread();
             DefendThread();
         }
@@ -96,34 +97,43 @@ namespace index
 
         private static void Offensive()
         {
-            while (anyoneAlive(attacker) && anyoneAlive(defender))
+            while (isAnyoneAlive(attackers) && isAnyoneAlive(defenders))
             {
                 attack_sem.Wait();
-                foreach (var el in defender)
+                turn = true;
+                foreach (var el in defenders)
                     if (el.CurrentHealth > 0)
-                        el.CurrentHealth = el.CurrentHealth - (getSummarizedSoftAttack(attacker) -
-                                                             (el.GetArmor() - getSummarizedHardAttack(attacker)));
+                    {
+                        el.CurrentHealth = el.CurrentHealth - (getSummarizedSoftAttack(attackers) - (el.GetArmor() - getSummarizedHardAttack(attackers)));
+                    }
 
                 form.Invoke((MethodInvoker)delegate { form.refreshForm(); });
 
                 Thread.Sleep(400);
                 defend_sem.Release();
             }
+
+            isFight = false;
         }
 
         private static void Defensive()
         {
-            while (anyoneAlive(attacker) && anyoneAlive(defender))
+            while (isAnyoneAlive(attackers) && isAnyoneAlive(defenders))
             {
                 defend_sem.Wait();
-                foreach (var el in attacker)
+                turn = false;
+
+                foreach (var el in attackers)
                     if (el.CurrentHealth > 0)
-                        el.CurrentHealth = el.CurrentHealth - (getSummarizedSoftAttack(defender) -
-                                                             (el.GetArmor() - getSummarizedHardAttack(defender)));
+                        el.CurrentHealth = el.CurrentHealth - (getSummarizedSoftAttack(defenders) -
+                                                             (el.GetArmor() - getSummarizedHardAttack(defenders)));
                 form.Invoke((MethodInvoker)delegate { form.refreshForm(); });
                 Thread.Sleep(400);
                 attack_sem.Release();
             }
+            isFight = false;
+
         }
+        
     }
 }

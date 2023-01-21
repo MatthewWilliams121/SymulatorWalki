@@ -19,17 +19,17 @@ namespace index
         {
         }
 
-        public int GetSoftAttack()
+        override public int GetSoftAttack()
         {
             return 5;
         }
 
-        public int GetHardAttack()
+        override public int GetHardAttack()
         {
             return 2;
         }
 
-        public int GetArmor()
+        override public int GetArmor()
         {
             return 0;
         }

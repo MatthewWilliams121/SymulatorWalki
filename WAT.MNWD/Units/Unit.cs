@@ -31,17 +31,17 @@ namespace index
             initialHealth = currentHealth;
         }
 
-        public int GetSoftAttack()
+        virtual public int GetSoftAttack()
         {
             return 0;
         }
 
-        public int GetHardAttack()
+        virtual public int GetHardAttack()
         {
             return 0;
         }
 
-        public int GetArmor()
+        virtual public int GetArmor()
         {
             return 0;
         }
@@ -105,7 +105,7 @@ namespace index
                     break;
                 case "Platoon":
                     strengthImage = Resources.Platoon;
-                    currentHealth = 4 * 100;
+                    currentHealth = 1 * 100;
                     break;
                 case "Company":
                     strengthImage = Resources.Company;

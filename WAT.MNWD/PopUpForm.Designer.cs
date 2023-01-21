@@ -213,7 +213,7 @@
             this.captionUnitName.Size = new System.Drawing.Size(133, 22);
             this.captionUnitName.TabIndex = 16;
             // 
-            // choosingUnit
+            // PopUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -241,7 +241,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "choosingUnit";
+            this.Name = "PopUpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Wybór jednostki";
             ((System.ComponentModel.ISupportInitialize)(this.pictureType)).EndInit();

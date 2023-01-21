@@ -185,9 +185,9 @@ namespace index
             }
 
             if (mainForm.getSelected() < 3)
-                Battlefield.attacker[mainForm.getSelected()] = unit;
+                Battlefield.attackers[mainForm.getSelected()] = unit;
             else
-                Battlefield.defender[mainForm.getSelected() - 3] = unit;
+                Battlefield.defenders[mainForm.getSelected() - 3] = unit;
 
             mainForm.refreshForm();
             Close();
