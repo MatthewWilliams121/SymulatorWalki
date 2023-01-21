@@ -217,6 +217,12 @@ namespace index
         private void zestaw1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Battlefield.attackers[0]  = new Mechanized("Test", 10, true, UnitSize.Company);
+            this.UnitsInFormCounter++;
+            popUpForm1 = new PopUpForm(this, Battlefield.attackers[0]);
+            
+            Battlefield.defenders[0]  = new Artillery("Test2", 100, false, UnitSize.Company);
+            this.UnitsInFormCounter++;
+            popUpForm4 = new PopUpForm(this, Battlefield.defenders[0]);
             refreshForm();
         }
     }

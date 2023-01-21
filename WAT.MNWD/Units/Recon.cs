@@ -6,6 +6,7 @@ namespace index
     {
         public Recon(string name, int identityNumber, bool side, UnitSize strength) : base(name, identityNumber, side, strength)
         {
+            this.unitKind = UnitKind.Recon;
             unitImage = Resources.nato_recon;
             setSizeImageAndOrganization();
         }

@@ -8,6 +8,9 @@ namespace index
     public partial class PopUpForm : Form
     {
         private readonly MainForm mainForm;
+        private UnitView _unitView;
+
+        
 
         public PopUpForm(MainForm mainForm)
         {
@@ -32,10 +35,7 @@ namespace index
             });
             unitKind.Enabled = false;
             unitSizeComboBox.Enabled = false;
-        }
-
-        private void PopUpFormLoad(object sender, EventArgs e)
-        {
+            
             checkBoxNATO.Enabled = false;
             checkBoxCSTO.Enabled = false;
             
@@ -43,7 +43,21 @@ namespace index
                 checkBoxNATO.Checked = true;
             else
                 checkBoxCSTO.Checked = true;
+            
         }
+        public PopUpForm(MainForm mainForm, Unit unit) : this(mainForm)
+        {
+            unitNumber.Text = unit.IdentityNumber.ToString();
+            unitNameLabel.Text = unit.Name;
+            unitKind.SelectedIndex = (int) unit.UnitKind;
+            unitSizeComboBox.Text = unit.Strength.ToString();
+
+            if (unit.Side)
+                checkBoxNATO.Checked = true;
+             else 
+                checkBoxCSTO.Checked = true;
+        }
+
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {

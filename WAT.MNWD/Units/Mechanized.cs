@@ -13,6 +13,7 @@ namespace index
 
         public Mechanized(string name, int identityNumber, bool side, UnitSize strength) : base(name, identityNumber, side, strength)
         {
+            this.unitKind = UnitKind.Mechanized;
             unitImage = Resources.nato_mechanized;
             setSizeImageAndOrganization();
         }

@@ -13,7 +13,14 @@ namespace index
         protected float currentHealth;
         protected UnitSize strength;
         protected bool side;
-        
+        protected UnitKind unitKind;
+
+        public UnitKind UnitKind
+        {
+            get => unitKind;
+            set => unitKind = value;
+        }
+
         protected Bitmap strengthImage;
         protected Bitmap unitImage;
 
