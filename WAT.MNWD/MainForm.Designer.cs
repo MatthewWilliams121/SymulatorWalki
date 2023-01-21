@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.unit1Button = new System.Windows.Forms.Button();
             this.unit2Button = new System.Windows.Forms.Button();
             this.unit3Button = new System.Windows.Forms.Button();
@@ -59,14 +60,14 @@
             this.turnLabel = new System.Windows.Forms.Label();
             this.regenerateUnits = new System.Windows.Forms.Button();
             this.removeUnit3 = new System.Windows.Forms.Button();
-            this.removeUnit2 = new System.Windows.Forms.Button();
             this.removeUnit1 = new System.Windows.Forms.Button();
-            this.removeUnit6 = new System.Windows.Forms.Button();
-            this.removeUnit5 = new System.Windows.Forms.Button();
-            this.removeUnit4 = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.testujProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zestaw1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeUnit2 = new System.Windows.Forms.Button();
+            this.removeUnit4 = new System.Windows.Forms.Button();
+            this.removeUnit6 = new System.Windows.Forms.Button();
+            this.removeUnit5 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.unit3SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit2SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit1SizePicture)).BeginInit();
@@ -296,53 +297,59 @@
             this.unit1Number.Location = new System.Drawing.Point(77, 489);
             this.unit1Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit1Number.Name = "unit1Number";
-            this.unit1Number.Size = new System.Drawing.Size(0, 13);
+            this.unit1Number.Size = new System.Drawing.Size(13, 13);
             this.unit1Number.TabIndex = 23;
+            this.unit1Number.Text = "0";
             // 
             // unit2Number
             // 
             this.unit2Number.AutoSize = true;
-            this.unit2Number.Location = new System.Drawing.Point(62, 336);
+            this.unit2Number.Location = new System.Drawing.Point(77, 334);
             this.unit2Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit2Number.Name = "unit2Number";
-            this.unit2Number.Size = new System.Drawing.Size(0, 13);
+            this.unit2Number.Size = new System.Drawing.Size(13, 13);
             this.unit2Number.TabIndex = 24;
+            this.unit2Number.Text = "0";
             // 
             // unit3Number
             // 
             this.unit3Number.AutoSize = true;
-            this.unit3Number.Location = new System.Drawing.Point(62, 173);
+            this.unit3Number.Location = new System.Drawing.Point(77, 173);
             this.unit3Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit3Number.Name = "unit3Number";
-            this.unit3Number.Size = new System.Drawing.Size(0, 13);
+            this.unit3Number.Size = new System.Drawing.Size(13, 13);
             this.unit3Number.TabIndex = 25;
+            this.unit3Number.Text = "0";
             // 
             // unit6Number
             // 
             this.unit6Number.AutoSize = true;
-            this.unit6Number.Location = new System.Drawing.Point(492, 174);
+            this.unit6Number.Location = new System.Drawing.Point(492, 173);
             this.unit6Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit6Number.Name = "unit6Number";
-            this.unit6Number.Size = new System.Drawing.Size(0, 13);
+            this.unit6Number.Size = new System.Drawing.Size(13, 13);
             this.unit6Number.TabIndex = 26;
+            this.unit6Number.Text = "0";
             // 
             // unit5Number
             // 
             this.unit5Number.AutoSize = true;
-            this.unit5Number.Location = new System.Drawing.Point(492, 337);
+            this.unit5Number.Location = new System.Drawing.Point(492, 336);
             this.unit5Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit5Number.Name = "unit5Number";
-            this.unit5Number.Size = new System.Drawing.Size(0, 13);
+            this.unit5Number.Size = new System.Drawing.Size(13, 13);
             this.unit5Number.TabIndex = 27;
+            this.unit5Number.Text = "0";
             // 
             // unit4Number
             // 
             this.unit4Number.AutoSize = true;
-            this.unit4Number.Location = new System.Drawing.Point(492, 490);
+            this.unit4Number.Location = new System.Drawing.Point(494, 490);
             this.unit4Number.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.unit4Number.Name = "unit4Number";
-            this.unit4Number.Size = new System.Drawing.Size(0, 13);
+            this.unit4Number.Size = new System.Drawing.Size(13, 13);
             this.unit4Number.TabIndex = 28;
+            this.unit4Number.Text = "0";
             // 
             // turnLabel
             // 
@@ -366,58 +373,24 @@
             // 
             // removeUnit3
             // 
+            this.removeUnit3.Image = ((System.Drawing.Image)(resources.GetObject("removeUnit3.Image")));
             this.removeUnit3.Location = new System.Drawing.Point(238, 139);
             this.removeUnit3.Name = "removeUnit3";
-            this.removeUnit3.Size = new System.Drawing.Size(17, 25);
+            this.removeUnit3.Size = new System.Drawing.Size(25, 25);
             this.removeUnit3.TabIndex = 31;
-            this.removeUnit3.Text = "button1";
             this.removeUnit3.UseVisualStyleBackColor = true;
-            // 
-            // removeUnit2
-            // 
-            this.removeUnit2.Location = new System.Drawing.Point(238, 301);
-            this.removeUnit2.Name = "removeUnit2";
-            this.removeUnit2.Size = new System.Drawing.Size(17, 25);
-            this.removeUnit2.TabIndex = 32;
-            this.removeUnit2.Text = "button2";
-            this.removeUnit2.UseVisualStyleBackColor = true;
+            this.removeUnit3.Click += new System.EventHandler(this.removeUnit3_Click);
             // 
             // removeUnit1
             // 
-            this.removeUnit1.Location = new System.Drawing.Point(238, 457);
+            this.removeUnit1.AutoSize = true;
+            this.removeUnit1.Image = ((System.Drawing.Image)(resources.GetObject("removeUnit1.Image")));
+            this.removeUnit1.Location = new System.Drawing.Point(238, 456);
             this.removeUnit1.Name = "removeUnit1";
-            this.removeUnit1.Size = new System.Drawing.Size(17, 25);
+            this.removeUnit1.Size = new System.Drawing.Size(22, 25);
             this.removeUnit1.TabIndex = 33;
-            this.removeUnit1.Text = "button3";
             this.removeUnit1.UseVisualStyleBackColor = true;
             this.removeUnit1.Click += new System.EventHandler(this.removeUnit1_Click);
-            // 
-            // removeUnit6
-            // 
-            this.removeUnit6.Location = new System.Drawing.Point(502, 139);
-            this.removeUnit6.Name = "removeUnit6";
-            this.removeUnit6.Size = new System.Drawing.Size(17, 25);
-            this.removeUnit6.TabIndex = 34;
-            this.removeUnit6.Text = "button4";
-            this.removeUnit6.UseVisualStyleBackColor = true;
-            // 
-            // removeUnit5
-            // 
-            this.removeUnit5.Location = new System.Drawing.Point(502, 301);
-            this.removeUnit5.Name = "removeUnit5";
-            this.removeUnit5.Size = new System.Drawing.Size(17, 25);
-            this.removeUnit5.TabIndex = 35;
-            this.removeUnit5.Text = "button5";
-            this.removeUnit5.UseVisualStyleBackColor = true;
-            // 
-            // removeUnit4
-            // 
-            this.removeUnit4.Location = new System.Drawing.Point(502, 457);
-            this.removeUnit4.Name = "removeUnit4";
-            this.removeUnit4.Size = new System.Drawing.Size(17, 25);
-            this.removeUnit4.TabIndex = 36;
-            this.removeUnit4.Text = "button6";
-            this.removeUnit4.UseVisualStyleBackColor = true;
             // 
             // menu
             // 
@@ -438,9 +411,49 @@
             // zestaw1ToolStripMenuItem
             // 
             this.zestaw1ToolStripMenuItem.Name = "zestaw1ToolStripMenuItem";
-            this.zestaw1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.zestaw1ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.zestaw1ToolStripMenuItem.Text = "Zestaw 1";
             this.zestaw1ToolStripMenuItem.Click += new System.EventHandler(this.zestaw1ToolStripMenuItem_Click);
+            // 
+            // removeUnit2
+            // 
+            this.removeUnit2.Image = ((System.Drawing.Image)(resources.GetObject("removeUnit2.Image")));
+            this.removeUnit2.Location = new System.Drawing.Point(238, 301);
+            this.removeUnit2.Name = "removeUnit2";
+            this.removeUnit2.Size = new System.Drawing.Size(25, 25);
+            this.removeUnit2.TabIndex = 38;
+            this.removeUnit2.UseVisualStyleBackColor = true;
+            this.removeUnit2.Click += new System.EventHandler(this.removeUnit2_Click);
+            // 
+            // removeUnit4
+            // 
+            this.removeUnit4.Image = ((System.Drawing.Image)(resources.GetObject("removeUnit4.Image")));
+            this.removeUnit4.Location = new System.Drawing.Point(652, 457);
+            this.removeUnit4.Name = "removeUnit4";
+            this.removeUnit4.Size = new System.Drawing.Size(25, 25);
+            this.removeUnit4.TabIndex = 39;
+            this.removeUnit4.UseVisualStyleBackColor = true;
+            this.removeUnit4.Click += new System.EventHandler(this.removeUnit4_Click);
+            // 
+            // removeUnit6
+            // 
+            this.removeUnit6.Image = ((System.Drawing.Image)(resources.GetObject("removeUnit6.Image")));
+            this.removeUnit6.Location = new System.Drawing.Point(652, 139);
+            this.removeUnit6.Name = "removeUnit6";
+            this.removeUnit6.Size = new System.Drawing.Size(25, 25);
+            this.removeUnit6.TabIndex = 40;
+            this.removeUnit6.UseVisualStyleBackColor = true;
+            this.removeUnit6.Click += new System.EventHandler(this.removeUnit6_Click);
+            // 
+            // removeUnit5
+            // 
+            this.removeUnit5.Image = ((System.Drawing.Image)(resources.GetObject("removeUnit5.Image")));
+            this.removeUnit5.Location = new System.Drawing.Point(652, 300);
+            this.removeUnit5.Name = "removeUnit5";
+            this.removeUnit5.Size = new System.Drawing.Size(25, 25);
+            this.removeUnit5.TabIndex = 41;
+            this.removeUnit5.UseVisualStyleBackColor = true;
+            this.removeUnit5.Click += new System.EventHandler(this.removeUnit5_Click);
             // 
             // MainForm
             // 
@@ -448,11 +461,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(764, 664);
-            this.Controls.Add(this.removeUnit4);
             this.Controls.Add(this.removeUnit5);
             this.Controls.Add(this.removeUnit6);
-            this.Controls.Add(this.removeUnit1);
+            this.Controls.Add(this.removeUnit4);
             this.Controls.Add(this.removeUnit2);
+            this.Controls.Add(this.removeUnit1);
             this.Controls.Add(this.removeUnit3);
             this.Controls.Add(this.regenerateUnits);
             this.Controls.Add(this.turnLabel);
@@ -486,12 +499,14 @@
             this.Controls.Add(this.unit1Button);
             this.Controls.Add(this.menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
             this.MainMenuStrip = this.menu;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
+            this.Text = "Symulator pola walki";
             this.Load += new System.EventHandler(this.MainFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.unit3SizePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit2SizePicture)).EndInit();
@@ -505,17 +520,18 @@
             this.PerformLayout();
         }
 
+        private System.Windows.Forms.Button removeUnit2;
+        private System.Windows.Forms.Button removeUnit4;
+        private System.Windows.Forms.Button removeUnit6;
+        private System.Windows.Forms.Button removeUnit5;
+
         private System.Windows.Forms.MenuStrip menu;
 
         private System.Windows.Forms.ToolStripMenuItem testujProgramToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zestaw1ToolStripMenuItem;
 
         private System.Windows.Forms.Button removeUnit3;
-        private System.Windows.Forms.Button removeUnit2;
         private System.Windows.Forms.Button removeUnit1;
-        private System.Windows.Forms.Button removeUnit6;
-        private System.Windows.Forms.Button removeUnit5;
-        private System.Windows.Forms.Button removeUnit4;
 
         private System.Windows.Forms.Button regenerateUnits;
 

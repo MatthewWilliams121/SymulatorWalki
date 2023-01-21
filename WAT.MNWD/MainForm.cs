@@ -166,6 +166,10 @@ namespace index
                     Battlefield.isFight = false;
                 }
             }
+            else
+            {
+                turnLabel.Text = "";
+            }
             var units = Battlefield.attackers.Concat(Battlefield.defenders).ToList();
             int i = 0;
             foreach (var unitView in unitViewsAttackers.Concat(unitViewsDefenders).ToList())
@@ -203,11 +207,7 @@ namespace index
             refreshForm();
         }
 
-        private void removeUnit1_Click(object sender, EventArgs e)
-        {
-            Battlefield.attackers[0] = new Unit();
-            refreshForm();
-        }
+        
 
         private void testujProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -217,13 +217,83 @@ namespace index
         private void zestaw1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Battlefield.attackers[0]  = new Mechanized("Test", 10, true, UnitSize.Company);
-            this.UnitsInFormCounter++;
             popUpForm1 = new PopUpForm(this, Battlefield.attackers[0]);
             
             Battlefield.defenders[0]  = new Artillery("Test2", 100, false, UnitSize.Company);
-            this.UnitsInFormCounter++;
+            
             popUpForm4 = new PopUpForm(this, Battlefield.defenders[0]);
+            unitsInFormCounter = 2;
+
+            Battlefield.attackers[1] = Battlefield.attackers[2] = new Unit();
+            Battlefield.defenders[1] = Battlefield.defenders[2] = new Unit();
+
             refreshForm();
+        }
+        private void removeUnit1_Click(object sender, EventArgs e)
+        {
+            if (Battlefield.attackers[0] != new Unit())
+            {
+                popUpForm1 = null;
+                Battlefield.attackers[0] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }
+        }
+        
+        private void removeUnit2_Click(object sender, EventArgs e)
+        {
+            if (Battlefield.attackers[1] != new Unit())
+            {
+                popUpForm2 = null;
+                Battlefield.attackers[1] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }
+        }
+
+        private void removeUnit3_Click(object sender, EventArgs e)
+        {
+            if (Battlefield.attackers[2] != new Unit())
+            {
+                popUpForm3 = null;
+                Battlefield.attackers[2] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }
+        }
+
+        private void removeUnit4_Click(object sender, EventArgs e)
+        {
+            if (Battlefield.defenders[0] != new Unit())
+            {
+                popUpForm4 = null;
+                Battlefield.defenders[0] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }
+        }
+        
+
+        private void removeUnit5_Click(object sender, EventArgs e)
+        {
+            if (Battlefield.defenders[1] != new Unit())
+            {
+                popUpForm5 = null;
+                Battlefield.defenders[1] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }     
+        }
+
+        private void removeUnit6_Click(object sender, EventArgs e)
+        {
+            if (Battlefield.defenders[2] != new Unit())
+            {
+                popUpForm6 = null;
+                Battlefield.defenders[2] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }     
         }
     }
 }
