@@ -57,6 +57,7 @@
             this.unit5Number = new System.Windows.Forms.Label();
             this.unit4Number = new System.Windows.Forms.Label();
             this.turnLabel = new System.Windows.Forms.Label();
+            this.regenerateUnits = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.unit3SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit2SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit1SizePicture)).BeginInit();
@@ -89,7 +90,6 @@
             // unit3Button
             // 
             this.unit3Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.unit3Button.Enabled = false;
             this.unit3Button.Location = new System.Drawing.Point(113, 98);
             this.unit3Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit3Button.Name = "unit3Button";
@@ -336,10 +336,23 @@
             // 
             // turnLabel
             // 
-            this.turnLabel.Location = new System.Drawing.Point(315, 13);
+            this.turnLabel.AutoSize = true;
+            this.turnLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.turnLabel.Location = new System.Drawing.Point(266, 34);
             this.turnLabel.Name = "turnLabel";
-            this.turnLabel.Size = new System.Drawing.Size(130, 59);
+            this.turnLabel.Size = new System.Drawing.Size(0, 29);
             this.turnLabel.TabIndex = 29;
+            this.turnLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // regenerateUnits
+            // 
+            this.regenerateUnits.Location = new System.Drawing.Point(248, 548);
+            this.regenerateUnits.Name = "regenerateUnits";
+            this.regenerateUnits.Size = new System.Drawing.Size(69, 42);
+            this.regenerateUnits.TabIndex = 30;
+            this.regenerateUnits.Text = "Zregeneruj jednostki";
+            this.regenerateUnits.UseVisualStyleBackColor = true;
+            this.regenerateUnits.Click += new System.EventHandler(this.regenerateUnitsButton_Click);
             // 
             // MainForm
             // 
@@ -347,6 +360,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(764, 626);
+            this.Controls.Add(this.regenerateUnits);
             this.Controls.Add(this.turnLabel);
             this.Controls.Add(this.unit4Number);
             this.Controls.Add(this.unit5Number);
@@ -392,6 +406,8 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button regenerateUnits;
 
         private System.Windows.Forms.Button unit1Button;
         private System.Windows.Forms.Button unit2Button;

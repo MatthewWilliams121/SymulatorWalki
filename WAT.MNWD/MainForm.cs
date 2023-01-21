@@ -11,6 +11,13 @@ namespace index
         private int selected;
         private List<UnitView> unitViewsAttackers;
         private List<UnitView> unitViewsDefenders;
+        private int unitsInFormCounter;
+        private PopUpForm popUpForm1, popUpForm2, popUpForm3, popUpForm4, popUpForm5, popUpForm6;
+        public int UnitsInFormCounter
+        {
+            get => unitsInFormCounter;
+            set => unitsInFormCounter = value;
+        }
 
         public MainForm()
         {
@@ -27,7 +34,15 @@ namespace index
             if (!Battlefield.isFight)
             {
                 selected = 0;
-                new PopUpForm(this).ShowDialog();
+                if (popUpForm1 != null)
+                {
+                    popUpForm1.ShowDialog();
+                }
+                else
+                {
+                    popUpForm1 = new PopUpForm(this);
+                    popUpForm1.ShowDialog();
+                }
             }
         }
 
@@ -36,7 +51,15 @@ namespace index
             if (!Battlefield.isFight)
             {
                 selected = 1;
-                new PopUpForm(this).ShowDialog();
+                if (popUpForm2 != null)
+                {
+                    popUpForm2.ShowDialog();
+                }
+                else
+                {
+                    popUpForm2 = new PopUpForm(this);
+                    popUpForm2.ShowDialog();
+                }
             }
         }
 
@@ -45,7 +68,15 @@ namespace index
             if (!Battlefield.isFight)
             {
                 selected = 2;
-                new PopUpForm(this).ShowDialog();
+                if (popUpForm3 != null)
+                {
+                    popUpForm3.ShowDialog();
+                }
+                else
+                {
+                    popUpForm3 = new PopUpForm(this);
+                    popUpForm3.ShowDialog();
+                }
             }
         }
 
@@ -53,8 +84,16 @@ namespace index
         {
             if (!Battlefield.isFight)
             {
-                selected = 3;
-                new PopUpForm(this).ShowDialog();
+                selected = 3;          
+                if (popUpForm4 != null)
+                {
+                    popUpForm4.ShowDialog();
+                }
+                else
+                {
+                    popUpForm4 = new PopUpForm(this);
+                    popUpForm4.ShowDialog();
+                }
             }
         }
 
@@ -62,8 +101,16 @@ namespace index
         {
             if (!Battlefield.isFight)
             {
-                selected = 4;
-                new PopUpForm(this).ShowDialog();
+                selected = 6;
+                if (popUpForm5 != null)
+                {
+                    popUpForm5.ShowDialog();
+                }
+                else
+                {
+                    popUpForm5 = new PopUpForm(this);
+                    popUpForm5.ShowDialog();
+                }
             }
         }
 
@@ -72,7 +119,15 @@ namespace index
             if (!Battlefield.isFight)
             {
                 selected = 5;
-                new PopUpForm(this).ShowDialog();
+                if (popUpForm6 != null)
+                {
+                    popUpForm6.ShowDialog();
+                }
+                else
+                {
+                    popUpForm6 = new PopUpForm(this);
+                    popUpForm6.ShowDialog();
+                }
             }
         }
 
@@ -97,17 +152,20 @@ namespace index
 
         public void refreshForm()
         {
-            if (Battlefield.Turn) turnLabel.Text = "Ruch: atakujący";
-            else turnLabel.Text = "Ruch: obrońcy";
-
-            if (!Battlefield.isAnyoneAlive(Battlefield.attackers) || !Battlefield.isAnyoneAlive(Battlefield.defenders))
+            if ( unitsInFormCounter >= 2)
             {
-                if (Battlefield.isAnyoneAlive(Battlefield.attackers)) turnLabel.Text = "Wygrał atakujący.";
-                else turnLabel.Text = "Wygrała obrona";
+                if (!Battlefield.Turn) turnLabel.Text = "Ruch: atakujący";
+                else turnLabel.Text = "Ruch: obrońcy";
 
-                Battlefield.isFight = false;
+                if (!Battlefield.isAnyoneAlive(Battlefield.attackers) ||
+                    !Battlefield.isAnyoneAlive(Battlefield.defenders))
+                {
+                    if (Battlefield.isAnyoneAlive(Battlefield.attackers)) turnLabel.Text = "Wygrał atakujący.";
+                    else turnLabel.Text = "Wygrała obrona";
+
+                    Battlefield.isFight = false;
+                }
             }
-
             var units = Battlefield.attackers.Concat(Battlefield.defenders).ToList();
             int i = 0;
             foreach (var unitView in unitViewsAttackers.Concat(unitViewsDefenders).ToList())
@@ -126,7 +184,7 @@ namespace index
 
         private void simulateButton_Click(object sender, EventArgs e)
         {
-            if (!Battlefield.isFight)
+            if (!Battlefield.isFight && unitsInFormCounter >= 2)
                 Battlefield.resolve(this);
         }
 
@@ -134,6 +192,15 @@ namespace index
         {
             if (!Battlefield.isFight)
                 Battlefield.switchSides(this);
+        }
+
+        private void regenerateUnitsButton_Click(object sender, EventArgs e)
+        {
+            foreach (var unit in Battlefield.attackers.Concat(Battlefield.defenders).ToList())
+            {
+                unit.CurrentHealth = unit.InitialHealth;
+            }
+            refreshForm();
         }
     }
 }

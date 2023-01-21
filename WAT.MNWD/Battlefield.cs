@@ -100,7 +100,7 @@ namespace index
             while (isAnyoneAlive(attackers) && isAnyoneAlive(defenders))
             {
                 attack_sem.Wait();
-                turn = true;
+                turn = false;
                 foreach (var el in defenders)
                     if (el.CurrentHealth > 0)
                     {
@@ -121,7 +121,7 @@ namespace index
             while (isAnyoneAlive(attackers) && isAnyoneAlive(defenders))
             {
                 defend_sem.Wait();
-                turn = false;
+                turn = true;
 
                 foreach (var el in attackers)
                     if (el.CurrentHealth > 0)

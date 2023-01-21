@@ -184,10 +184,17 @@ namespace index
                     break;
             }
 
+            //UnitsInFormCounter can be greater than 6
             if (mainForm.getSelected() < 3)
+            {
                 Battlefield.attackers[mainForm.getSelected()] = unit;
+                mainForm.UnitsInFormCounter++;
+            }
             else
+            {
                 Battlefield.defenders[mainForm.getSelected() - 3] = unit;
+                mainForm.UnitsInFormCounter++;
+            }
 
             mainForm.refreshForm();
             Close();
