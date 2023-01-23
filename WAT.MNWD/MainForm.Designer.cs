@@ -63,13 +63,13 @@
             this.removeUnit1 = new System.Windows.Forms.Button();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.testujProgramToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.zestaw1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.testujProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zestaw1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeUnit2 = new System.Windows.Forms.Button();
             this.removeUnit4 = new System.Windows.Forms.Button();
             this.removeUnit6 = new System.Windows.Forms.Button();
             this.removeUnit5 = new System.Windows.Forms.Button();
-            this.zestaw1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.unit3SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit2SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit1SizePicture)).BeginInit();
@@ -81,27 +81,30 @@
             // 
             // unit1Button
             // 
+            this.unit1Button.BackColor = System.Drawing.Color.Bisque;
             this.unit1Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.unit1Button.Location = new System.Drawing.Point(110, 456);
             this.unit1Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit1Button.Name = "unit1Button";
             this.unit1Button.Size = new System.Drawing.Size(123, 78);
             this.unit1Button.TabIndex = 0;
-            this.unit1Button.UseVisualStyleBackColor = true;
+            this.unit1Button.UseVisualStyleBackColor = false;
             this.unit1Button.Click += new System.EventHandler(this.unit1Button_Click);
             // 
             // unit2Button
             // 
+            this.unit2Button.BackColor = System.Drawing.Color.Bisque;
             this.unit2Button.Location = new System.Drawing.Point(110, 300);
             this.unit2Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit2Button.Name = "unit2Button";
             this.unit2Button.Size = new System.Drawing.Size(123, 78);
             this.unit2Button.TabIndex = 2;
-            this.unit2Button.UseVisualStyleBackColor = true;
+            this.unit2Button.UseVisualStyleBackColor = false;
             this.unit2Button.Click += new System.EventHandler(this.unit2Button_Click);
             // 
             // unit3Button
             // 
+            this.unit3Button.BackColor = System.Drawing.Color.Bisque;
             this.unit3Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.unit3Button.Location = new System.Drawing.Point(110, 139);
             this.unit3Button.Margin = new System.Windows.Forms.Padding(2);
@@ -113,33 +116,36 @@
             // 
             // unit6Button
             // 
+            this.unit6Button.BackColor = System.Drawing.Color.Bisque;
             this.unit6Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.unit6Button.Location = new System.Drawing.Point(524, 139);
             this.unit6Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit6Button.Name = "unit6Button";
             this.unit6Button.Size = new System.Drawing.Size(123, 81);
             this.unit6Button.TabIndex = 4;
-            this.unit6Button.UseVisualStyleBackColor = true;
+            this.unit6Button.UseVisualStyleBackColor = false;
             this.unit6Button.Click += new System.EventHandler(this.unit6Button_Click);
             // 
             // unit5Button
             // 
+            this.unit5Button.BackColor = System.Drawing.Color.Bisque;
             this.unit5Button.Location = new System.Drawing.Point(524, 301);
             this.unit5Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit5Button.Name = "unit5Button";
             this.unit5Button.Size = new System.Drawing.Size(123, 78);
             this.unit5Button.TabIndex = 5;
-            this.unit5Button.UseVisualStyleBackColor = true;
+            this.unit5Button.UseVisualStyleBackColor = false;
             this.unit5Button.Click += new System.EventHandler(this.unit5Button_Click);
             // 
             // unit4Button
             // 
+            this.unit4Button.BackColor = System.Drawing.Color.Bisque;
             this.unit4Button.Location = new System.Drawing.Point(524, 457);
             this.unit4Button.Margin = new System.Windows.Forms.Padding(2);
             this.unit4Button.Name = "unit4Button";
             this.unit4Button.Size = new System.Drawing.Size(123, 78);
             this.unit4Button.TabIndex = 6;
-            this.unit4Button.UseVisualStyleBackColor = true;
+            this.unit4Button.UseVisualStyleBackColor = false;
             this.unit4Button.Click += new System.EventHandler(this.unit4Button_Click);
             // 
             // simulateButton
@@ -397,7 +403,6 @@
             // 
             // menu
             // 
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.testujProgramToolStripMenuItem1 });
             this.menu.Location = new System.Drawing.Point(0, 0);
             this.menu.Name = "menu";
             this.menu.Size = new System.Drawing.Size(764, 24);
@@ -406,14 +411,23 @@
             // 
             // testujProgramToolStripMenuItem1
             // 
-            this.testujProgramToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.zestaw1ToolStripMenuItem1 });
+            this.testujProgramToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zestaw1ToolStripMenuItem1});
             this.testujProgramToolStripMenuItem1.Name = "testujProgramToolStripMenuItem1";
             this.testujProgramToolStripMenuItem1.Size = new System.Drawing.Size(98, 20);
             this.testujProgramToolStripMenuItem1.Text = "Testuj program";
             // 
+            // zestaw1ToolStripMenuItem1
+            // 
+            this.zestaw1ToolStripMenuItem1.Name = "zestaw1ToolStripMenuItem1";
+            this.zestaw1ToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
+            this.zestaw1ToolStripMenuItem1.Text = "Zestaw 1";
+            this.zestaw1ToolStripMenuItem1.Click += new System.EventHandler(this.zestaw1ToolStripMenuItem1_Click);
+            // 
             // testujProgramToolStripMenuItem
             // 
-            this.testujProgramToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { this.zestaw1ToolStripMenuItem });
+            this.testujProgramToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zestaw1ToolStripMenuItem});
             this.testujProgramToolStripMenuItem.Name = "testujProgramToolStripMenuItem";
             this.testujProgramToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.testujProgramToolStripMenuItem.Text = "Testuj program";
@@ -463,13 +477,6 @@
             this.removeUnit5.TabIndex = 41;
             this.removeUnit5.UseVisualStyleBackColor = true;
             this.removeUnit5.Click += new System.EventHandler(this.removeUnit5_Click);
-            // 
-            // zestaw1ToolStripMenuItem1
-            // 
-            this.zestaw1ToolStripMenuItem1.Name = "zestaw1ToolStripMenuItem1";
-            this.zestaw1ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.zestaw1ToolStripMenuItem1.Text = "Zestaw 1";
-            this.zestaw1ToolStripMenuItem1.Click += new System.EventHandler(this.zestaw1ToolStripMenuItem1_Click);
             // 
             // MainForm
             // 
@@ -534,6 +541,7 @@
             this.menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.ToolStripMenuItem zestaw1ToolStripMenuItem1;

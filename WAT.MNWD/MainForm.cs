@@ -280,10 +280,10 @@ namespace index
 
         private void zestaw1ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Battlefield.attackers[0]  = new Mechanized("Test", 10, true, UnitSize.Company);
+            Battlefield.attackers[0]  = new Mechanized("Test", 10, false, UnitSize.Company);
             popUpForm1 = new PopUpForm(this, Battlefield.attackers[0]);
             
-            Battlefield.defenders[0]  = new Artillery("Test2", 100, false, UnitSize.Company);
+            Battlefield.defenders[0]  = new Artillery("Test2", 100, true, UnitSize.Company);
             
             popUpForm4 = new PopUpForm(this, Battlefield.defenders[0]);
             unitsInFormCounter = 2;
