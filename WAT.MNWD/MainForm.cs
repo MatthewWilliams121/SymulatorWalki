@@ -209,15 +209,76 @@ namespace index
             }
             refreshForm();
         }
-
         
-
-        private void testujProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void removeUnit1_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            if (!Battlefield.attackers[0].Equals(new Unit()))
+            {
+                popUpForm1 = null;
+                Battlefield.attackers[0] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }
+        }
+        
+        private void removeUnit2_Click(object sender, EventArgs e)
+        {
+            if (!Battlefield.attackers[1].Equals(new Unit()))
+            {
+                popUpForm2 = null;
+                Battlefield.attackers[1] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }
         }
 
-        private void zestaw1ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void removeUnit3_Click(object sender, EventArgs e)
+        {
+            if(!Battlefield.attackers[2].Equals(new Unit()))
+            {
+                popUpForm3 = null;
+                Battlefield.attackers[2] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }
+        }
+
+        private void removeUnit4_Click(object sender, EventArgs e)
+        {
+            if (!Battlefield.defenders[0].Equals(new Unit()))
+            {
+                popUpForm4 = null;
+                Battlefield.defenders[0] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }
+        }
+        
+
+        private void removeUnit5_Click(object sender, EventArgs e)
+        {
+            if (!Battlefield.defenders[1].Equals(new Unit()))
+            {
+                popUpForm5 = null;
+                Battlefield.defenders[1] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }     
+        }
+
+        private void removeUnit6_Click(object sender, EventArgs e)
+        {
+            if (!Battlefield.defenders[2].Equals(new Unit()))
+            {
+                popUpForm6 = null;
+                Battlefield.defenders[2] = new Unit();
+                unitsInFormCounter--;
+                refreshForm();
+            }     
+        }
+
+        private void zestaw1ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Battlefield.attackers[0]  = new Mechanized("Test", 10, true, UnitSize.Company);
             popUpForm1 = new PopUpForm(this, Battlefield.attackers[0]);
@@ -231,72 +292,7 @@ namespace index
             Battlefield.defenders[1] = Battlefield.defenders[2] = new Unit();
 
             refreshForm();
-        }
-        private void removeUnit1_Click(object sender, EventArgs e)
-        {
-            if (Battlefield.attackers[0].Equals(new Unit()))
-            {
-                popUpForm1 = null;
-                Battlefield.attackers[0] = new Unit();
-                unitsInFormCounter--;
-                refreshForm();
-            }
-        }
-        
-        private void removeUnit2_Click(object sender, EventArgs e)
-        {
-            if (Battlefield.attackers[1].Equals(new Unit()))
-            {
-                popUpForm2 = null;
-                Battlefield.attackers[1] = new Unit();
-                unitsInFormCounter--;
-                refreshForm();
-            }
-        }
-
-        private void removeUnit3_Click(object sender, EventArgs e)
-        {
-            if(Battlefield.attackers[2].Equals(new Unit()))
-            {
-                popUpForm3 = null;
-                Battlefield.attackers[2] = new Unit();
-                unitsInFormCounter--;
-                refreshForm();
-            }
-        }
-
-        private void removeUnit4_Click(object sender, EventArgs e)
-        {
-            if (Battlefield.defenders[0].Equals(new Unit()))
-            {
-                popUpForm4 = null;
-                Battlefield.defenders[0] = new Unit();
-                unitsInFormCounter--;
-                refreshForm();
-            }
-        }
-        
-
-        private void removeUnit5_Click(object sender, EventArgs e)
-        {
-            if (Battlefield.defenders[1].Equals(new Unit()))
-            {
-                popUpForm5 = null;
-                Battlefield.defenders[1] = new Unit();
-                unitsInFormCounter--;
-                refreshForm();
-            }     
-        }
-
-        private void removeUnit6_Click(object sender, EventArgs e)
-        {
-            if (Battlefield.defenders[2].Equals(new Unit()))
-            {
-                popUpForm6 = null;
-                Battlefield.defenders[2] = new Unit();
-                unitsInFormCounter--;
-                refreshForm();
-            }     
+            
         }
     }
 }
