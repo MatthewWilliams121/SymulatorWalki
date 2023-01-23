@@ -13,7 +13,10 @@ namespace index
         private List<UnitView> unitViewsAttackers;
         private List<UnitView> unitViewsDefenders;
         private int unitsInFormCounter;
+        private List<PopUpForm> popUpForms;
+
         private PopUpForm popUpForm1, popUpForm2, popUpForm3, popUpForm4, popUpForm5, popUpForm6;
+
         public int UnitsInFormCounter
         {
             get => unitsInFormCounter;
@@ -35,14 +38,14 @@ namespace index
             if (!Battlefield.isFight)
             {
                 selected = 0;
-                if (popUpForm1 != null)
+                if (popUpForms[0] != null)
                 {
-                    popUpForm1.ShowDialog();
+                    popUpForms[0].ShowDialog();
                 }
                 else
                 {
-                    popUpForm1 = new PopUpForm(this);
-                    popUpForm1.ShowDialog();
+                    popUpForms[0] = new PopUpForm(this);
+                    popUpForms[0].ShowDialog();
                 }
             }
         }
@@ -52,14 +55,14 @@ namespace index
             if (!Battlefield.isFight)
             {
                 selected = 1;
-                if (popUpForm2 != null)
+                if (popUpForms[1] != null)
                 {
-                    popUpForm2.ShowDialog();
+                    popUpForms[1].ShowDialog();
                 }
                 else
                 {
-                    popUpForm2 = new PopUpForm(this);
-                    popUpForm2.ShowDialog();
+                    popUpForms[1] = new PopUpForm(this);
+                    popUpForms[1].ShowDialog();
                 }
             }
         }
@@ -69,14 +72,14 @@ namespace index
             if (!Battlefield.isFight)
             {
                 selected = 2;
-                if (popUpForm3 != null)
+                if (popUpForms[2] != null)
                 {
-                    popUpForm3.ShowDialog();
+                    popUpForms[2].ShowDialog();
                 }
                 else
                 {
-                    popUpForm3 = new PopUpForm(this);
-                    popUpForm3.ShowDialog();
+                    popUpForms[2] = new PopUpForm(this);
+                    popUpForms[2].ShowDialog();
                 }
             }
         }
@@ -85,15 +88,15 @@ namespace index
         {
             if (!Battlefield.isFight)
             {
-                selected = 3;          
-                if (popUpForm4 != null)
+                selected = 3;
+                if (popUpForms[3] != null)
                 {
-                    popUpForm4.ShowDialog();
+                    popUpForms[3].ShowDialog();
                 }
                 else
                 {
-                    popUpForm4 = new PopUpForm(this);
-                    popUpForm4.ShowDialog();
+                    popUpForms[3] = new PopUpForm(this);
+                    popUpForms[3].ShowDialog();
                 }
             }
         }
@@ -103,14 +106,14 @@ namespace index
             if (!Battlefield.isFight)
             {
                 selected = 4;
-                if (popUpForm5 != null)
+                if (popUpForms[4] != null)
                 {
-                    popUpForm5.ShowDialog();
+                    popUpForms[4].ShowDialog();
                 }
                 else
                 {
-                    popUpForm5 = new PopUpForm(this);
-                    popUpForm5.ShowDialog();
+                    popUpForms[4] = new PopUpForm(this);
+                    popUpForms[4].ShowDialog();
                 }
             }
         }
@@ -120,14 +123,14 @@ namespace index
             if (!Battlefield.isFight)
             {
                 selected = 5;
-                if (popUpForm6 != null)
+                if (popUpForms[5] != null)
                 {
-                    popUpForm6.ShowDialog();
+                    popUpForms[5].ShowDialog();
                 }
                 else
                 {
-                    popUpForm6 = new PopUpForm(this);
-                    popUpForm6.ShowDialog();
+                    popUpForms[5] = new PopUpForm(this);
+                    popUpForms[5].ShowDialog();
                 }
             }
         }
@@ -150,12 +153,21 @@ namespace index
                 new UnitView(unit5Button, unit5ProgressBar, unit5Number, unit5SizePicture),
                 new UnitView(unit6Button, unit6ProgressBar, unit6Number, unit6SizePicture)
             };
+            popUpForms = new List<PopUpForm>()
+            {
+                popUpForm1,
+                popUpForm2,
+                popUpForm3,
+                popUpForm4,
+                popUpForm5,
+                popUpForm6,
+            };
         }
 
 
         public void refreshForm()
         {
-            if ( unitsInFormCounter >= 2)
+            if (unitsInFormCounter >= 2)
             {
                 if (!Battlefield.Turn) turnLabel.Text = "Ruch: atakujący";
                 else turnLabel.Text = "Ruch: obrońcy";
@@ -173,6 +185,7 @@ namespace index
             {
                 turnLabel.Text = "";
             }
+
             var units = Battlefield.attackers.Concat(Battlefield.defenders).ToList();
             int i = 0;
             foreach (var unitView in unitViewsAttackers.Concat(unitViewsDefenders).ToList())
@@ -198,7 +211,9 @@ namespace index
         private void switchSidesButton_Click(object sender, EventArgs e)
         {
             if (!Battlefield.isFight)
+            {
                 Battlefield.switchSides(this);
+            }
         }
 
         private void regenerateUnitsButton_Click(object sender, EventArgs e)
@@ -207,26 +222,27 @@ namespace index
             {
                 unit.CurrentHealth = unit.InitialHealth;
             }
+
             refreshForm();
         }
-        
-        
+
+
         private void removeUnit1_Click(object sender, EventArgs e)
         {
             if (!Battlefield.attackers[0].Equals(new Unit()))
             {
-                popUpForm1 = null;
+                popUpForms[0] = null;
                 Battlefield.attackers[0] = new Unit();
                 unitsInFormCounter--;
                 refreshForm();
             }
         }
-        
+
         private void removeUnit2_Click(object sender, EventArgs e)
         {
             if (!Battlefield.attackers[1].Equals(new Unit()))
             {
-                popUpForm2 = null;
+                popUpForms[1] = null;
                 Battlefield.attackers[1] = new Unit();
                 unitsInFormCounter--;
                 refreshForm();
@@ -235,9 +251,9 @@ namespace index
 
         private void removeUnit3_Click(object sender, EventArgs e)
         {
-            if(!Battlefield.attackers[2].Equals(new Unit()))
+            if (!Battlefield.attackers[2].Equals(new Unit()))
             {
-                popUpForm3 = null;
+                popUpForms[2] = null;
                 Battlefield.attackers[2] = new Unit();
                 unitsInFormCounter--;
                 refreshForm();
@@ -248,51 +264,41 @@ namespace index
         {
             if (!Battlefield.defenders[0].Equals(new Unit()))
             {
-                popUpForm4 = null;
+                popUpForms[3] = null;
                 Battlefield.defenders[0] = new Unit();
                 unitsInFormCounter--;
                 refreshForm();
             }
         }
-        
+
 
         private void removeUnit5_Click(object sender, EventArgs e)
         {
             if (!Battlefield.defenders[1].Equals(new Unit()))
             {
-                popUpForm5 = null;
+                popUpForms[4] = null;
                 Battlefield.defenders[1] = new Unit();
                 unitsInFormCounter--;
                 refreshForm();
-            }     
+            }
         }
 
         private void removeUnit6_Click(object sender, EventArgs e)
         {
             if (!Battlefield.defenders[2].Equals(new Unit()))
             {
-                popUpForm6 = null;
+                popUpForms[5] = null;
                 Battlefield.defenders[2] = new Unit();
                 unitsInFormCounter--;
                 refreshForm();
-            }     
+            }
         }
+        
 
-        private void zestaw1ToolStripMenuItem1_Click(object sender, EventArgs e)
+        public List<PopUpForm> PopUpForms
         {
-            Battlefield.attackers[0]  = new Mechanized("Test", 10, true, UnitSize.Company);
-            popUpForm1 = new PopUpForm(this, Battlefield.attackers[0]);
-            
-            Battlefield.defenders[0]  = new Artillery("Test2", 100, false, UnitSize.Company);
-            
-            popUpForm4 = new PopUpForm(this, Battlefield.defenders[0]);
-            unitsInFormCounter = 2;
-
-            Battlefield.attackers[1] = Battlefield.attackers[2] = new Unit();
-            Battlefield.defenders[1] = Battlefield.defenders[2] = new Unit();
-
-            refreshForm();
-            
+            get => popUpForms;
+            set => popUpForms = value;
         }
     }
 }
