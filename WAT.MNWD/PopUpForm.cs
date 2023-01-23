@@ -9,6 +9,7 @@ namespace index
     {
         private readonly MainForm mainForm;
         private UnitView _unitView;
+
         
 
         public PopUpForm(MainForm mainForm)
@@ -37,20 +38,12 @@ namespace index
             
             checkBoxNATO.Enabled = false;
             checkBoxCSTO.Enabled = false;
-
-
+            
             if (mainForm.getSelected() < 3)
-            {
-                checkBoxNATO.Checked = false;
-                checkBoxCSTO.Checked = true;
-            }
-            else
-            {
                 checkBoxNATO.Checked = true;
-                checkBoxCSTO.Checked = false;
-            }
-
-
+            else
+                checkBoxCSTO.Checked = true;
+            
         }
         public PopUpForm(MainForm mainForm, Unit unit) : this(mainForm)
         {
@@ -59,17 +52,10 @@ namespace index
             unitKind.SelectedIndex = (int) unit.UnitKind;
             unitSizeComboBox.Text = unit.Strength.ToString();
 
-            if (!unit.Side)
-            {
+            if (unit.Side)
                 checkBoxNATO.Checked = true;
-                checkBoxCSTO.Checked = false;
-            }
-            else
-            {
+             else 
                 checkBoxCSTO.Checked = true;
-                checkBoxNATO.Checked = false;
-            } 
-                
         }
 
 
@@ -159,7 +145,7 @@ namespace index
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(checkBoxCSTO.Checked)
+            if(checkBoxCSTO.Checked == true)
             {
                 switch (unitKind.SelectedIndex)
                 {
@@ -181,27 +167,27 @@ namespace index
                         break;
                 }
             }else
-                switch (unitKind.SelectedIndex)
-                {
+            switch (unitKind.SelectedIndex)
+            {
 
-                    case 0:
-                        pictureType.Image = Resources.nato_infantry;
-                        break;
-                    case 1:
-                        pictureType.Image = Resources.nato_armoured;
-                        break;
-                    case 2:
-                        pictureType.Image = Resources.nato_recon;
-                        break;
-                    case 3:
-                        pictureType.Image = Resources.nato_artilery;
-                        break;
-                    case 4:
-                        pictureType.Image = Resources.nato_mechanized;
-                        break;
-                }
-            
+                case 0:
+                    pictureType.Image = Resources.nato_infantry;
+                    break;
+                case 1:
+                    pictureType.Image = Resources.nato_armoured;
+                    break;
+                case 2:
+                    pictureType.Image = Resources.nato_recon;
+                    break;
+                case 3:
+                    pictureType.Image = Resources.nato_artilery;
+                    break;
+                case 4:
+                    pictureType.Image = Resources.nato_mechanized;
+                    break;
+            }
             if (unitKind.Enabled) unitSizeComboBox.Enabled = true;
+
         }
 
         private void saveUnitButton_Click(object sender, EventArgs e)
@@ -214,7 +200,7 @@ namespace index
             }
             bool side;
             Unit unit = new Unit();
-            if(checkBoxNATO.Checked)
+            if(checkBoxNATO.Checked == true)
             {
                 side = false;
             }
@@ -225,19 +211,19 @@ namespace index
             switch (unitKind.SelectedIndex)
             {
                 case 0:
-                    unit = new Infantry(unitNameLabel.Text,int.Parse(unitNumber.Text), side, (UnitSize) unitSizeComboBox.SelectedIndex);
+                    unit = new Infantry(unitNameLabel.Text,short.Parse(unitNumber.Text), side, (UnitSize) unitSizeComboBox.SelectedIndex);
                     break;
                 case 1:
-                    unit = new Armoured(unitNameLabel.Text,int.Parse(unitNumber.Text), side, (UnitSize) unitSizeComboBox.SelectedIndex);
+                    unit = new Armoured(unitNameLabel.Text,short.Parse(unitNumber.Text), side, (UnitSize) unitSizeComboBox.SelectedIndex);
                     break;
                 case 2:
-                    unit = new Recon(unitNameLabel.Text,int.Parse(unitNumber.Text), side, (UnitSize) unitSizeComboBox.SelectedIndex);
+                    unit = new Recon(unitNameLabel.Text,short.Parse(unitNumber.Text), side, (UnitSize) unitSizeComboBox.SelectedIndex);
                     break;
                 case 3:
-                    unit = new Artillery(unitNameLabel.Text,int.Parse(unitNumber.Text), side, (UnitSize) unitSizeComboBox.SelectedIndex);
+                    unit = new Artillery(unitNameLabel.Text,short.Parse(unitNumber.Text), side, (UnitSize) unitSizeComboBox.SelectedIndex);
                     break;
                 case 4:
-                    unit = new Mechanized(unitNameLabel.Text,int.Parse(unitNumber.Text), side, (UnitSize) unitSizeComboBox.SelectedIndex);
+                    unit = new Mechanized(unitNameLabel.Text,short.Parse(unitNumber.Text), side, (UnitSize) unitSizeComboBox.SelectedIndex);
                     break;
             }
 
@@ -261,6 +247,10 @@ namespace index
         {
             Close();
         }
-        
+
+        private void pictureType_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

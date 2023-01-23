@@ -10,9 +10,7 @@ namespace index
         private static readonly SemaphoreSlim attack_sem = new SemaphoreSlim(1, 1);
         private static readonly SemaphoreSlim defend_sem = new SemaphoreSlim(0, 1);
         private static MainForm form;
-        private static bool turn; //true - offense ; false - defense
-        public static bool swapped ;
-
+        private static bool turn; //true - offense ; false - defense 
         public static bool Turn
         {
             get => turn;
@@ -34,7 +32,7 @@ namespace index
         };
 
         public static bool isFight;
-
+        
 
         public static void switchSides(MainForm f1)
         {
@@ -48,13 +46,6 @@ namespace index
             temp = attackers;
             attackers = defenders;
             defenders = temp;
-
-            (form.PopUpForms[0], form.PopUpForms[3]) = (form.PopUpForms[3], form.PopUpForms[0]);
-            (form.PopUpForms[1], form.PopUpForms[4]) = (form.PopUpForms[4], form.PopUpForms[1]);
-            (form.PopUpForms[2], form.PopUpForms[5]) = (form.PopUpForms[5], form.PopUpForms[2]);
-
-
-            Battlefield.swapped = !Battlefield.swapped;
             form.refreshForm();
         }
 
@@ -113,8 +104,7 @@ namespace index
                 foreach (var el in defenders)
                     if (el.CurrentHealth > 0)
                     {
-                        el.CurrentHealth = el.CurrentHealth - (getSummarizedSoftAttack(attackers) -
-                                                               (el.GetArmor() - getSummarizedHardAttack(attackers)));
+                        el.CurrentHealth = el.CurrentHealth - (getSummarizedSoftAttack(attackers) - (el.GetArmor() - getSummarizedHardAttack(attackers)));
                     }
 
                 form.Invoke((MethodInvoker)delegate { form.refreshForm(); });
@@ -136,13 +126,14 @@ namespace index
                 foreach (var el in attackers)
                     if (el.CurrentHealth > 0)
                         el.CurrentHealth = el.CurrentHealth - (getSummarizedSoftAttack(defenders) -
-                                                               (el.GetArmor() - getSummarizedHardAttack(defenders)));
+                                                             (el.GetArmor() - getSummarizedHardAttack(defenders)));
                 form.Invoke((MethodInvoker)delegate { form.refreshForm(); });
                 Thread.Sleep(400);
                 attack_sem.Release();
             }
-
             isFight = false;
+
         }
+        
     }
 }

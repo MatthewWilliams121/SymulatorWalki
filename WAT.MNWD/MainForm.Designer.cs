@@ -61,12 +61,15 @@
             this.regenerateUnits = new System.Windows.Forms.Button();
             this.removeUnit3 = new System.Windows.Forms.Button();
             this.removeUnit1 = new System.Windows.Forms.Button();
-
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.testujProgramToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.zestaw1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.testujProgramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zestaw1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeUnit2 = new System.Windows.Forms.Button();
             this.removeUnit4 = new System.Windows.Forms.Button();
             this.removeUnit6 = new System.Windows.Forms.Button();
             this.removeUnit5 = new System.Windows.Forms.Button();
-
             ((System.ComponentModel.ISupportInitialize)(this.unit3SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit2SizePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit1SizePicture)).BeginInit();
@@ -397,7 +400,43 @@
             this.removeUnit1.TabIndex = 33;
             this.removeUnit1.UseVisualStyleBackColor = true;
             this.removeUnit1.Click += new System.EventHandler(this.removeUnit1_Click);
-
+            // 
+            // menu
+            // 
+            this.menu.Location = new System.Drawing.Point(0, 0);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(764, 24);
+            this.menu.TabIndex = 37;
+            this.menu.Text = "menuStrip1";
+            // 
+            // testujProgramToolStripMenuItem1
+            // 
+            this.testujProgramToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zestaw1ToolStripMenuItem1});
+            this.testujProgramToolStripMenuItem1.Name = "testujProgramToolStripMenuItem1";
+            this.testujProgramToolStripMenuItem1.Size = new System.Drawing.Size(98, 20);
+            this.testujProgramToolStripMenuItem1.Text = "Testuj program";
+            // 
+            // zestaw1ToolStripMenuItem1
+            // 
+            this.zestaw1ToolStripMenuItem1.Name = "zestaw1ToolStripMenuItem1";
+            this.zestaw1ToolStripMenuItem1.Size = new System.Drawing.Size(120, 22);
+            this.zestaw1ToolStripMenuItem1.Text = "Zestaw 1";
+            this.zestaw1ToolStripMenuItem1.Click += new System.EventHandler(this.zestaw1ToolStripMenuItem1_Click);
+            // 
+            // testujProgramToolStripMenuItem
+            // 
+            this.testujProgramToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zestaw1ToolStripMenuItem});
+            this.testujProgramToolStripMenuItem.Name = "testujProgramToolStripMenuItem";
+            this.testujProgramToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.testujProgramToolStripMenuItem.Text = "Testuj program";
+            // 
+            // zestaw1ToolStripMenuItem
+            // 
+            this.zestaw1ToolStripMenuItem.Name = "zestaw1ToolStripMenuItem";
+            this.zestaw1ToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.zestaw1ToolStripMenuItem.Text = "Zestaw 1";
             // 
             // removeUnit2
             // 
@@ -439,22 +478,6 @@
             this.removeUnit5.UseVisualStyleBackColor = true;
             this.removeUnit5.Click += new System.EventHandler(this.removeUnit5_Click);
             // 
-
-            // menu
-            // 
-            this.menu.AutoSize = false;
-            this.menu.Dock = System.Windows.Forms.DockStyle.None;
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { this.testujProgreamToolStripMenuItem });
-            this.menu.Location = new System.Drawing.Point(110, 2);
-            this.menu.Name = "menu";
-            this.menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menu.Size = new System.Drawing.Size(92, 19);
-            this.menu.TabIndex = 0;
-            this.menu.TabStop = true;
-            this.menu.Visible = false;
-           
-            // 
-
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -497,13 +520,16 @@
             this.Controls.Add(this.unit3Button);
             this.Controls.Add(this.unit2Button);
             this.Controls.Add(this.unit1Button);
+            this.Controls.Add(this.menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(15, 15);
+            this.MainMenuStrip = this.menu;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
+            this.Text = "Symulator pola walki";
             this.Load += new System.EventHandler(this.MainFormLoad);
             ((System.ComponentModel.ISupportInitialize)(this.unit3SizePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unit2SizePicture)).EndInit();
@@ -518,7 +544,9 @@
 
         }
 
-        private System.Windows.Forms.ToolStripMenuItem testujProgreamToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zestaw1ToolStripMenuItem1;
+
+        private System.Windows.Forms.ToolStripMenuItem testujProgramToolStripMenuItem1;
 
         private System.Windows.Forms.Button removeUnit2;
         private System.Windows.Forms.Button removeUnit4;
