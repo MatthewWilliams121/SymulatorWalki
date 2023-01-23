@@ -12,7 +12,14 @@ namespace index
         public Infantry(string name, int identityNumber, bool side, UnitSize strength) : base(name, identityNumber, side, strength)
         {
             unitImage = Resources.nato_infantry;
-            this.unitKind = UnitKind.Infantry;
+            if (side == false)
+            {
+                unitImage = Resources.nato_infantry;
+            }
+            else
+            {
+                unitImage = Resources.hostile_infantry;
+            }
             setSizeImageAndOrganization();
         }
 

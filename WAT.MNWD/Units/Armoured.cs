@@ -7,7 +7,14 @@ namespace index
         public Armoured(string name, int identityNumber, bool side, UnitSize strength) : base(name, identityNumber, side, strength)
         {
             this.unitKind = UnitKind.Armoured;
-            unitImage = Resources.nato_armoured;
+            if (side == false)
+            {
+                unitImage = Resources.nato_armoured;
+            }
+            else
+            {
+                unitImage = Resources.hostile_armour;
+            }
             setSizeImageAndOrganization();
         }
         override public int GetSoftAttack()

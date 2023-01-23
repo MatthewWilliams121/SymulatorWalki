@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using index.Properties;
 
 namespace index
 {
@@ -134,6 +135,8 @@ namespace index
 
         private void MainFormLoad(object sender, EventArgs e)
         {
+            this.BackgroundImage = Resources.plains;
+            this.BackgroundImageLayout = ImageLayout.Stretch;
             unitViewsAttackers = new List<UnitView>
             {
                 new UnitView(unit1Button, unit1ProgressBar, unit1Number, unit1SizePicture),

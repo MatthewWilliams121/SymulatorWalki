@@ -7,7 +7,14 @@ namespace index
         public Artillery(string name, int identityNumber, bool side, UnitSize strength) : base(name, identityNumber, side, strength)
         {
             this.unitKind = UnitKind.Artillery;
-            unitImage = Resources.nato_artilery;
+            if (side == false)
+            {
+                unitImage = Resources.nato_artilery;
+            }
+            else
+            {
+                unitImage = Resources.hostile_artillery;
+            }
             setSizeImageAndOrganization();
         }
         override public int GetSoftAttack()
