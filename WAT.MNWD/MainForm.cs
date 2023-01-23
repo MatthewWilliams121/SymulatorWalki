@@ -297,8 +297,10 @@ namespace index
 
         public List<PopUpForm> PopUpForms
         {
+
             get => popUpForms;
             set => popUpForms = value;
+
         }
     }
 }
